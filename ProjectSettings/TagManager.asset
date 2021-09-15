@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - NPC
+  - LootCrate
+  - Background
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4144110125
+    locked: 0
+  - name: Grass
+    uniqueID: 1962047591
+    locked: 0
+  - name: Dirt
+    uniqueID: 3405323247
+    locked: 0
+  - name: Monster
+    uniqueID: 3671501475
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2138770499
+    locked: 0
+  - name: Stone
+    uniqueID: 3519188517
+    locked: 0
+  - name: LootCrates
+    uniqueID: 794907083
+    locked: 0
+  - name: Buildings
+    uniqueID: 1461571535
+    locked: 0
+  - name: Trees
+    uniqueID: 2676313743
+    locked: 0
+  - name: Foliage
+    uniqueID: 3273911333
+    locked: 0
+  - name: Player
+    uniqueID: 1229792089
+    locked: 0
+  - name: NPC
+    uniqueID: 110126805
+    locked: 0

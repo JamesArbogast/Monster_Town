@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 25b88e4a84da54e389df2a5fd41054ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9042522821666118069
+    second: 192-1929045_monster-sprite-sheet-png_0
+  - first:
+      213: -7135348544649246411
+    second: 192-1929045_monster-sprite-sheet-png_1
+  - first:
+      213: 1151530614780773250
+    second: 192-1929045_monster-sprite-sheet-png_2
+  - first:
+      213: -3973272692562441175
+    second: 192-1929045_monster-sprite-sheet-png_3
+  - first:
+      213: 6459212142822064557
+    second: 192-1929045_monster-sprite-sheet-png_4
+  - first:
+      213: 7577487807484160188
+    second: 192-1929045_monster-sprite-sheet-png_5
+  - first:
+      213: 1653817316003706721
+    second: 192-1929045_monster-sprite-sheet-png_6
+  - first:
+      213: -7916846618722671972
+    second: 192-1929045_monster-sprite-sheet-png_7
+  - first:
+      213: 9209912117915192342
+    second: 192-1929045_monster-sprite-sheet-png_8
+  - first:
+      213: -8196742357312494368
+    second: 192-1929045_monster-sprite-sheet-png_9
+  - first:
+      213: -8998061748581928729
+    second: 192-1929045_monster-sprite-sheet-png_10
+  - first:
+      213: 5587137011717220193
+    second: 192-1929045_monster-sprite-sheet-png_11
+  - first:
+      213: -4514617853012037425
+    second: 192-1929045_monster-sprite-sheet-png_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 384
+        width: 171
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b466a3d2761828280800000000000000
+      internalID: -9042522821666118069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 384
+        width: 175
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539c497ad462afc90800000000000000
+      internalID: -7135348544649246411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_2
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 384
+        width: 171
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283cef93efe0bff00800000000000000
+      internalID: 1151530614780773250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_3
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 384
+        width: 167
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c4e0499891cd8c0800000000000000
+      internalID: -3973272692562441175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_4
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 384
+        width: 160
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da18cc5b83bb3a950800000000000000
+      internalID: 6459212142822064557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 192
+        width: 160
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb862fe7305a82960800000000000000
+      internalID: 7577487807484160188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 192
+        width: 157
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1677acb261a83f610800000000000000
+      internalID: 1653817316003706721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_7
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 192
+        width: 160
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9268cd02f5b12290800000000000000
+      internalID: -7916846618722671972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_8
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 192
+        width: 171
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c86e8664e20df70800000000000000
+      internalID: 9209912117915192342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_9
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 192
+        width: 175
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4adf411425f3e80800000000000000
+      internalID: -8196742357312494368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 142
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e07eb07386702380800000000000000
+      internalID: -8998061748581928729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_11
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 150
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167a7de928f798d40800000000000000
+      internalID: 5587137011717220193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 192-1929045_monster-sprite-sheet-png_12
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 0
+        width: 153
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0b49e6bfad851c0800000000000000
+      internalID: -4514617853012037425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

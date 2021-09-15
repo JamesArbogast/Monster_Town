@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{A2CDEDD7-77DB-8C04-CCF1-C8EC6EB62637}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SelectorManagement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="16" Column="29" />
+      <File FileName="Assets/MonsterMovement.cs" />
+      <File FileName="Assets/Scripts/PlayerCharacters/BasePlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/SelectorManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/PlayerMovement.cs" Line="74" Column="51" NotebookId="1" />
+      <File FileName="Assets/Scripts/PlayerCharacters/HunterMale.cs" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eb6f51d7-b08b-42d6-b6d0-96c04d7100be" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
