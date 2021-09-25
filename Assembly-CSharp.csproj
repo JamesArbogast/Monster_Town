@@ -122,6 +122,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
+    <Compile Include="Assets\LevelChanger.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
