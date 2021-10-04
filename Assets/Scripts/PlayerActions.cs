@@ -110,7 +110,7 @@ public class PlayerActions : MonoBehaviour
             else
             {
                 //Debug.Log("IsntMoving");
-                myRigidBody.velocity = Vector2.zero;
+                /*myRigidBody.velocity = Vector2.zero;*/
             }
 
             if (Input.GetKeyDown(KeyCode.J))
