@@ -55,21 +55,37 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //roll directions
-        if(movement.x == 1)
+        if (movement.y == -1 && movement.x == -1)
         {
-            newSpot = new Vector2(transform.position.x + 2, transform.position.y);
+            newSpot = new Vector2(transform.position.x - .8f, transform.position.y - .8f);
+        }
+        else if (movement.y == 1 && movement.x == 1)
+        {
+            newSpot = new Vector2(transform.position.x + .8f, transform.position.y + .8f);
+        }
+        else if (movement.y == 1 && movement.x == - 1)
+        {
+            newSpot = new Vector2(transform.position.x - .8f, transform.position.y + .8f);
+        }
+        else if (movement.y == -1 && movement.x == 1)
+        {
+            newSpot = new Vector2(transform.position.x + .8f, transform.position.y - .8f);
         }
         else if (movement.x == -1)
         {
-            newSpot = new Vector2(transform.position.x - 2, transform.position.y);
+            newSpot = new Vector2(transform.position.x - 1, transform.position.y);
         }
         else if (movement.y == 1)
         {
-            newSpot = new Vector2(transform.position.x, transform.position.y + 2);
+            newSpot = new Vector2(transform.position.x, transform.position.y + 1);
         }
         else if (movement.y == -1)
         {
-            newSpot = new Vector2(transform.position.x, transform.position.y - 2);
+            newSpot = new Vector2(transform.position.x, transform.position.y - 1);
+        }
+        else if(movement.x == 1)
+        {
+            newSpot = new Vector2(transform.position.x + 1, transform.position.y);
         }
 
     }
@@ -86,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = State.DodgeRollSliding;
             slideDir = (newSpot - transform.position).normalized;
-            slideSpeed = 100f;
+            slideSpeed = 50f;
         }
     }
 
