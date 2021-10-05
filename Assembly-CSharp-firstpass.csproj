@@ -760,6 +760,14 @@
       <Project>{8CE4DC21-C1A5-C493-7EE5-8B5C1F402CBC}</Project>
       <Name>Unity.2D.Animation.Samples.Dependency</Name>
     </ProjectReference>
+    <ProjectReference Include="Ink-Libraries.csproj">
+      <Project>{0E6D58E5-457A-0E62-2503-F6C385BADB14}</Project>
+      <Name>Ink-Libraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="InkEditor.csproj">
+      <Project>{016C6229-14C3-1C5F-F896-36589F504744}</Project>
+      <Name>InkEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

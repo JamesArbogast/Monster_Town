@@ -126,6 +126,8 @@
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Monsters\BaseMonster\Monster.cs" />
+    <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
+    <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
@@ -735,6 +737,14 @@
     <ProjectReference Include="Unity.2D.Animation.Samples.Dependency.csproj">
       <Project>{8CE4DC21-C1A5-C493-7EE5-8B5C1F402CBC}</Project>
       <Name>Unity.2D.Animation.Samples.Dependency</Name>
+    </ProjectReference>
+    <ProjectReference Include="Ink-Libraries.csproj">
+      <Project>{0E6D58E5-457A-0E62-2503-F6C385BADB14}</Project>
+      <Name>Ink-Libraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="InkEditor.csproj">
+      <Project>{016C6229-14C3-1C5F-F896-36589F504744}</Project>
+      <Name>InkEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
