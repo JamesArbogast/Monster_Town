@@ -71,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         {
             newSpot = new Vector2(transform.position.x, transform.position.y - 2);
         }
+
     }
 
     private void FixedUpdate()
