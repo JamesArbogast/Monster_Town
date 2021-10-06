@@ -82,9 +82,11 @@
     <Compile Include="Assets\ObjectGold.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\ScientistMale.cs" />
+    <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\NPCDialogue.cs" />
     <Compile Include="Assets\Dialogue.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\GameStateMachine.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="Assets\HoverEffects.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\Monsters\BaseMonster\Monster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -125,9 +128,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Monsters\BaseMonster\Monster.cs" />
-    <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
-    <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />

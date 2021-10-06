@@ -80,3 +80,6 @@ TagManager:
   - name: NPC
     uniqueID: 110126805
     locked: 0
+  - name: Weapon
+    uniqueID: 3365483975
+    locked: 0
