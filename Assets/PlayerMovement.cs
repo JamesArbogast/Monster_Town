@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 newSpot;
     private float slideSpeed;
     private State state;
+
+    //attacks
+    public GameObject projectile;
     private enum State
     {
         Normal,
@@ -86,6 +89,12 @@ public class PlayerMovement : MonoBehaviour
         else if(movement.x == 1)
         {
             newSpot = new Vector2(transform.position.x + 1, transform.position.y);
+        }
+
+        //projectile
+        if(Input.GetButtonDown("SecondWeapon"))
+        {
+
         }
 
     }
