@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Normal,
         DodgeRollSliding,
+        Attacking,
+        Interact
     }
 
     // Update is called once per frame
@@ -94,7 +96,8 @@ public class PlayerMovement : MonoBehaviour
         //projectile
         if(Input.GetButtonDown("SecondWeapon"))
         {
-
+            StartCoroutine(ProjectileAttack());
+            Debug.Log("Weapon fired!");
         }
 
     }
@@ -103,6 +106,28 @@ public class PlayerMovement : MonoBehaviour
     {
         //Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    //attacks
+    private IEnumerator ProjectileAttack()
+    {
+        //anim.SetBool("isAttacking", true);
+        state = State.Attacking;
+        yield return null;
+        MakeArrow();
+        //anim.SetBool("isAttacking", false);
+        yield return new WaitForSeconds(.3f);
+        if(state != State.Interact)
+        {
+            state = State.Normal;
+        }
+    }
+
+    private void MakeArrow()
+    {
+        Vector2 temp = new Vector2(anim.GetFloat("Horizontal"),anim.GetFloat("Vertical"));
+        Projectiles arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Projectiles>();
+        arrow.SetUp(temp, Vector3.zero);
     }
 
     private void HandleDodgeRoll()

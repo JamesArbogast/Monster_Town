@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_MinSize: {x: 241, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 46
+  controlID: 53
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -100,7 +100,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 989
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_MinSize: {x: 517, y: 442}
   m_MaxSize: {x: 8002, y: 8042}
   vertical: 0
-  controlID: 101
+  controlID: 108
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 292}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 102
+  controlID: 109
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,9 +319,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.632676, y: 5.5872116, z: -471.30853}
+    m_Target: {x: 1.5825174, y: 0.4262811, z: -2.201736}
     speed: 2
-    m_Value: {x: 9.632676, y: 5.5872116, z: -471.30853}
+    m_Value: {x: 1.5825174, y: 0.4262811, z: -2.201736}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -372,9 +372,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 47.600685
+    m_Target: 0.26421556
     speed: 2
-    m_Value: 47.600685
+    m_Value: 0.26421556
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -465,23 +465,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 1014
-      height: 474
-    m_Scale: {x: 0.6171875, y: 0.6171875}
-    m_Translation: {x: 507.00003, y: 237}
+      height: 453
+    m_Scale: {x: 0.58984375, y: 0.58984375}
+    m_Translation: {x: 507, y: 226.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -821.4684
+      x: -859.5497
       y: -384
-      width: 1642.9368
+      width: 1719.0994
       height: 768
     m_MinimalGUI: 1
-  m_defaultScale: 0.6171875
+  m_defaultScale: 0.58984375
   m_LastWindowPixelSize: {x: 1014, y: 474}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -542,8 +542,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
+      m_SelectedIDs: 5c3b0000
+      m_LastClickedID: 15196
       m_ExpandedIDs: 5cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 142
+  m_LastVerticalScrollValue: 180
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -644,21 +644,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/RPGW_AncientForest/Sliced
+    - Assets
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/RPGW_AncientForest/Sliced
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\james\OneDrive\Desktop\My Games\Monster_Town!
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 945d0000
-    m_LastClickedID: 23956
-    m_ExpandedIDs: 00000000ec690000ee690000f0690000f2690000f4690000f6690000f8690000fa690000fc690000fe690000006a0000026a0000046a0000066a0000086a00000a6a00000c6a00000e6a0000106a0000126a0000146a0000166a0000186a00001a6a0000
+    m_SelectedIDs: ec690000
+    m_LastClickedID: 27116
+    m_ExpandedIDs: 00000000ec690000ee690000f0690000f2690000f4690000f6690000f8690000fa690000fc690000fe690000006a0000026a0000046a0000066a0000086a00000e6a0000126a0000186a00001a6a0000806c000082a1000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -711,8 +711,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c65d0000
-    m_LastClickedInstanceID: 24006
+    m_SelectedInstanceIDs: 5c3b0000
+    m_LastClickedInstanceID: 15196
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e43b0000fa490000145a0000da5b0000743c0000000000008a4f0000406e000032750000ce3a0000863a0000bc830000be870000aac30000de5d0000
     m_RenameOverlay:
@@ -738,7 +738,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 285.5}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 318
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 24068
+  m_LastSelectedObjectID: 15196
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

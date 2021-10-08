@@ -12,9 +12,9 @@ public class Projectiles : MonoBehaviour
         
     }
 
-    private void SetUp(Vector2 velocity, Vector3 direction)
+    public void SetUp(Vector2 velocity, Vector3 direction)
     {
-        myRb.velocity = velocity.normalized * Time.deltaTime;
+        myRb.velocity = velocity.normalized * speed;
         transform.rotation = Quaternion.Euler(direction);
     }
 }
