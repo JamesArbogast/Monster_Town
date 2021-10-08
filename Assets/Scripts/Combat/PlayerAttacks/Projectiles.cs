@@ -17,4 +17,12 @@ public class Projectiles : MonoBehaviour
         myRb.velocity = velocity.normalized * speed;
         transform.rotation = Quaternion.Euler(direction);
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("enemy"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

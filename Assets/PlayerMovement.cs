@@ -127,7 +127,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 temp = new Vector2(anim.GetFloat("Horizontal"),anim.GetFloat("Vertical"));
         Projectiles arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Projectiles>();
-        arrow.SetUp(temp, Vector3.zero);
+        arrow.SetUp(temp, ChooseArrowDirection());
+    }
+
+    Vector3 ChooseArrowDirection()
+    {
+        float temp = Mathf.Atan2(anim.GetFloat("Vertical"), anim.GetFloat("Horizontal")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, temp);
     }
 
     private void HandleDodgeRoll()
