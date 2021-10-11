@@ -69,11 +69,11 @@
     <Compile Include="Assets\ReturnToCharacterSelectButton.cs" />
     <Compile Include="Assets\DayNightCycle.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\CivilianMale.cs" />
+    <Compile Include="Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs" />
     <Compile Include="Assets\CharacterUIInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\SelectCharacter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\DialogueTrigger.cs" />
     <Compile Include="Assets\MonsterMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -129,7 +129,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\EnergyManager.cs" />
+    <Compile Include="Assets\Scripts\Items\PickupItems\EnergyPowerUp.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\TileSets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
