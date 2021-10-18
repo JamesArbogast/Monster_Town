@@ -60,6 +60,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\HunterMale.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\BasePlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerActions.cs" />
     <Compile Include="Assets\ClockUI.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Scripts\PlayerCharacters\CivilianMale.cs" />
     <Compile Include="Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs" />
     <Compile Include="Assets\CharacterUIInfo.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemMain\Powerup.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\SelectCharacter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Assets\MonsterMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\ObjectGold.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
@@ -88,6 +91,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\Items\PickupItems\EnergyPowerUp.cs" />
     <Compile Include="Assets\GameStateMachine.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\NPCMovement.cs" />
@@ -101,6 +105,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\GameFunction\SignalListener.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
@@ -113,6 +118,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Monsters\BaseMonster\Monster.cs" />
+    <Compile Include="Assets\Scripts\Player\EnergyManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -129,12 +135,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\EnergyManager.cs" />
-    <Compile Include="Assets\Scripts\Items\PickupItems\EnergyPowerUp.cs" />
-    <Compile Include="Assets\Scripts\Items\ItemMain\Powerup.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
-    <Compile Include="Assets\Scripts\GameFunction\SignalListener.cs" />
+    <Compile Include="Assets\LootChest.cs" />
+    <Compile Include="Assets\Scripts\Items\Interactable.cs" />
+    <Compile Include="Assets\Sign.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\TileSets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
