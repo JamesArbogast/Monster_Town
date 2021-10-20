@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cab2370dd23cbd4ba0c41dc896244e0, type: 3}
   m_Name: PlayerMovement
   m_EditorClassIdentifier: 
-  listeners: []
+  listeners:
+  - {fileID: 0}
