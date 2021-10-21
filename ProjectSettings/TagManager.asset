@@ -74,6 +74,9 @@ TagManager:
   - name: Foliage
     uniqueID: 3273911333
     locked: 0
+  - name: Signs
+    uniqueID: 3581672447
+    locked: 0
   - name: Player
     uniqueID: 1229792089
     locked: 0

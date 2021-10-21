@@ -99,6 +99,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\PoliticianMale.cs" />
+    <Compile Include="Assets\Sign.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -129,15 +130,16 @@
     <Compile Include="Assets\Gold.cs" />
     <Compile Include="Assets\LevelChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\LootChest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
-    <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\LootChest.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable.cs" />
-    <Compile Include="Assets\Sign.cs" />
+    <Compile Include="Assets\DialogueManager.cs" />
+    <Compile Include="Assets\InventoryManagement.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemMain\Item.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\TileSets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
