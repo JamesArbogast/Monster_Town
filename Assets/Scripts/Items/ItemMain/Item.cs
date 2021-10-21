@@ -14,9 +14,11 @@ public class Item
     }
 
     public ItemTypes itemType;
+    public int itemID;
 
-    public Item(ItemTypes itemType)
+
+    public Item()
     {
-        itemType = this.itemType;
+        itemID = Random.Range(0, 500000);
     }
 }

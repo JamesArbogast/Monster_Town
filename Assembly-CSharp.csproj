@@ -140,6 +140,7 @@
     <Compile Include="Assets\DialogueManager.cs" />
     <Compile Include="Assets\InventoryManagement.cs" />
     <Compile Include="Assets\Scripts\Items\ItemMain\Item.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemMain\Equipment\Equipment.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\TileSets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
