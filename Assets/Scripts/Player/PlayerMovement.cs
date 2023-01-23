@@ -96,10 +96,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //projectile
-        if(Input.GetButtonDown("SecondWeapon"))
+        if(Input.GetKeyDown("space"))
         {
             StartCoroutine(ProjectileAttack());
-            Debug.Log("Weapon fired!");
         }
 
     }
@@ -113,10 +112,13 @@ public class PlayerMovement : MonoBehaviour
     //attacks
     private IEnumerator ProjectileAttack()
     {
+        Debug.Log("Weapon fired!");
         //anim.SetBool("isAttacking", true);
         state = State.Attacking;
+        Projectiles arrow = MakeArrow();
+        Destroy(arrow.gameObject, 2f);
+        Debug.Log("Arrow destroyed");
         yield return null;
-        MakeArrow();
         //anim.SetBool("isAttacking", false);
         yield return new WaitForSeconds(.3f);
         if(state != State.Interact)
@@ -125,11 +127,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void MakeArrow()
+    private Projectiles MakeArrow()
     {
         Vector2 temp = new Vector2(anim.GetFloat("Horizontal"),anim.GetFloat("Vertical"));
         Projectiles arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Projectiles>();
         arrow.SetUp(temp, ChooseArrowDirection());
+        return arrow;
     }
 
     Vector3 ChooseArrowDirection()
@@ -144,17 +147,23 @@ public class PlayerMovement : MonoBehaviour
         {
             state = State.DodgeRollSliding;
             slideDir = (newSpot - transform.position).normalized;
-            slideSpeed = 50f;
+            Debug.Log(slideDir);
+            slideSpeed = 40f;
         }
     }
 
     private void HandleDodgeRollSliding()
     {
+        if(slideDir == new Vector3(1.0f, 0.0f, 0.0f))
+        {
+            anim.SetBool("RollRight", true);
+        }
         transform.position += slideDir * slideSpeed * Time.deltaTime;
-        slideSpeed -= slideSpeed * 10f * Time.deltaTime;
+        slideSpeed -= slideSpeed * 9f * Time.deltaTime;
         if(slideSpeed < 5f)
         {
             state = State.Normal;
+            anim.SetBool("RollRight", false);
         }
     }
 }

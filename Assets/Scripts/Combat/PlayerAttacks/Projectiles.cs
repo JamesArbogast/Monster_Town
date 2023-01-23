@@ -20,7 +20,7 @@ public class Projectiles : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("enemy"))
+        if(other.gameObject.CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
         }

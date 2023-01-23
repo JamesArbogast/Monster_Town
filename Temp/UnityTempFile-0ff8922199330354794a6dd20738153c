@@ -337,6 +337,7 @@ Assets\Scripts\Camera\CameraMovement.cs
 Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs
 Assets\Scripts\GameFunction\SignalListener.cs
 Assets\Scripts\Items\Interactable.cs
+Assets\Scripts\Items\ItemMain\Equipment\Equipment.cs
 Assets\Scripts\Items\ItemMain\Item.cs
 Assets\Scripts\Items\ItemMain\Powerup.cs
 Assets\Scripts\Items\PickupItems\EnergyPowerUp.cs
