@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LootChest : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {

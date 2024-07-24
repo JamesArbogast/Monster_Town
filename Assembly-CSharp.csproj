@@ -67,6 +67,7 @@
     <Compile Include="Assets\MeleeAttack.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemMain\Equipment\Equipment.cs" />
     <Compile Include="Assets\ReturnToCharacterSelectButton.cs" />
     <Compile Include="Assets\DayNightCycle.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\CivilianMale.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\CharacterUIInfo.cs" />
     <Compile Include="Assets\Scripts\Items\ItemMain\Powerup.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\InventoryManagement.cs" />
     <Compile Include="Assets\SelectCharacter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\DialogueTrigger.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\ObjectGold.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemMain\Item.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\ScientistMale.cs" />
     <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
@@ -138,9 +141,8 @@
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\InventoryManagement.cs" />
-    <Compile Include="Assets\Scripts\Items\ItemMain\Item.cs" />
-    <Compile Include="Assets\Scripts\Items\ItemMain\Equipment\Equipment.cs" />
+    <Compile Include="Assets\GoldCounter.cs" />
+    <Compile Include="Assets\GoldManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\TileSets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />

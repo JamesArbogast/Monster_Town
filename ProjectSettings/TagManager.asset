@@ -7,6 +7,7 @@ TagManager:
   - NPC
   - LootCrate
   - Background
+  - Enemy
   layers:
   - Default
   - TransparentFX
