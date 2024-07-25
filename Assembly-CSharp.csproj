@@ -60,6 +60,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\HunterMale.cs" />
+    <Compile Include="Assets\GoldManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\BasePlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerActions.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Assets\Gold.cs" />
     <Compile Include="Assets\LevelChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\GoldCounter.cs" />
     <Compile Include="Assets\LootChest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -141,8 +143,7 @@
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\GoldCounter.cs" />
-    <Compile Include="Assets\GoldManager.cs" />
+    <Compile Include="Assets\HealthManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\TileSets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />

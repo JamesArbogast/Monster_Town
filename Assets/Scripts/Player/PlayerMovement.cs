@@ -29,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
     public float maxEng = 20f;
     public float minEng = 0;
 
+    //stamina
+    public float maxStam = 20f;
+    public float minStam = 0;
+
     // Update is called once per frame
     void Update()
     {
@@ -145,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
+
             state = State.DodgeRollSliding;
             slideDir = (newSpot - transform.position).normalized;
             Debug.Log(slideDir);

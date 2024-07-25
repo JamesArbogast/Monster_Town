@@ -20,8 +20,8 @@ public class NPCDialogue : MonoBehaviour
         npcCollider = FindObjectOfType<BoxCollider2D>();
         playerActions = GameObject.Find("Player").GetComponent<PlayerActions>();
         dialogueTrigger = GetComponentInChildren<DialogueTrigger>(); //GameObject.Find("DialogueTrigger").GetComponent<DialogueTrigger>();
-        //dialogueBox = GameObject.Find("DialogueBox")
-        dialogueBox.SetActive(false);
+        dialogueBox = GameObject.Find("DialogueBox");
+        //dialogueBox.SetActive(false);
         dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
 

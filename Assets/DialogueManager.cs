@@ -25,14 +25,13 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dialogueActive)
-        {
-            dialogueBox.SetActive(true);
-        }
-        else
-        {
-            dialogueBox.SetActive(false);
-        }
+
+    }
+
+    public void SetDialogueBoxActive()
+    {
+        dialogueBox.SetActive(true);
+
     }
 
     public void StartDialogue (Dialogue dialogue)

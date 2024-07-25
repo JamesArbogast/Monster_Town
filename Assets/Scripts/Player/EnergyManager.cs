@@ -11,6 +11,7 @@ public class EnergyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
         energySlider.maxValue = pm.maxEng;
         energySlider.value = pm.maxEng;
     }
