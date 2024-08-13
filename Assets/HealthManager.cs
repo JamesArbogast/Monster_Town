@@ -16,21 +16,28 @@ public class HealthManager : MonoBehaviour
         healthSlider.value = pm.maxStam;
     }
 
-    public void AddStam()
+    public void AddHealth(int healthNum)
     {
-        healthSlider.value += 2;
-        if (healthSlider.value > healthSlider.maxValue)
+        if ((healthSlider.value += healthNum) > healthSlider.maxValue)
         {
             healthSlider.value = healthSlider.maxValue;
         }
+        else
+        {
+            healthSlider.value += healthNum;
+        }
     }
 
-    public void DecreaseStam()
+    public void DecreaseHealth(int healthNum)
     {
-        healthSlider.value -= 2;
-        if (healthSlider.value < healthSlider.minValue)
+
+        if ((healthSlider.value -= healthNum) < healthSlider.minValue)
         {
             healthSlider.value = healthSlider.minValue;
+        }
+        else
+        {
+            healthSlider.value -= healthNum;
         }
     }
 }

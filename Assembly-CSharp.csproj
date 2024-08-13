@@ -78,6 +78,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\InventoryManagement.cs" />
     <Compile Include="Assets\SelectCharacter.cs" />
+    <Compile Include="Assets\HealthManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\DialogueTrigger.cs" />
     <Compile Include="Assets\MonsterMovement.cs" />
@@ -143,7 +144,8 @@
     <Compile Include="Assets\ConfirmCharacterButton.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\HealthManager.cs" />
+    <Compile Include="Assets\EnergyManager.cs" />
+    <Compile Include="Assets\StaminaManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Art\TileSets\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />

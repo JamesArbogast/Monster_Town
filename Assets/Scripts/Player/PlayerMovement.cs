@@ -149,7 +149,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-
             state = State.DodgeRollSliding;
             slideDir = (newSpot - transform.position).normalized;
             Debug.Log(slideDir);

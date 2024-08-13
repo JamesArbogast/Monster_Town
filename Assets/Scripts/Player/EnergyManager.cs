@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnergyManager : MonoBehaviour
+public class EngManager : MonoBehaviour
 {
     public Slider energySlider;
     public PlayerMovement pm;
@@ -16,21 +16,27 @@ public class EnergyManager : MonoBehaviour
         energySlider.value = pm.maxEng;
     }
 
-    public void AddEng()
+    public void AddEng(int engNum)
     {
-        energySlider.value += 2;
-        if(energySlider.value > energySlider.maxValue)
+        if((energySlider.value += engNum) > energySlider.maxValue)
         {
             energySlider.value = energySlider.maxValue;
         }
+        else
+        {
+            energySlider.value += engNum;
+        }
     }
 
-    public void DecreaseEng()
+    public void DecreaseEng(int engNum)
     {
-        energySlider.value -= 2;
-        if (energySlider.value < energySlider.minValue)
+        if ((energySlider.value -= engNum) < energySlider.minValue)
         {
             energySlider.value = energySlider.minValue;
+        }
+        else
+        {
+            energySlider.value -= engNum;
         }
     }
 }
