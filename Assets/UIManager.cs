@@ -43,9 +43,9 @@ public class UIManager : MonoBehaviour
         float fixNum = ((float)num / 100);
         Debug.Log(fixNum);
         Slider curSlider = sliders[type];
-        Debug.Log(curSlider.value);
-        curSlider.value = curSlider.value + fixNum;
-        Debug.Log(curSlider.value += fixNum);
+        float newVal = fixNum + curSlider.value;
+        Debug.Log(newVal);
+        curSlider.value = newVal;
         if (curSlider.value < curSlider.minValue)
         {
             curSlider.value = curSlider.minValue;
