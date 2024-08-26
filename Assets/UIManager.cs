@@ -7,11 +7,14 @@ public class UIManager : MonoBehaviour
 {
     public List<GameObject> allUI = new List<GameObject>();
     public Dictionary<string, Slider> sliders = new Dictionary<string, Slider>();
+    public PlayerMovement pm;
+    public Coroutine regen;
 
     // Start is called before the first frame update
     void Start()
     {
         allUI = SortUI();
+        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -31,20 +34,15 @@ public class UIManager : MonoBehaviour
             }
             allUI.Add(child.gameObject);
         }
-
-        UpdateSliderUI("Stamina", 35);
         return allUI;
 
     }
 
-    void UpdateSliderUI(string type, int num)
+    public void UpdateSliderUI(string type, int num)
     {
-        Debug.Log(num);
-        float fixNum = ((float)num / 100);
-        Debug.Log(fixNum);
+        float fixNum = ((float)num / pm.maxStam);
         Slider curSlider = sliders[type];
         float newVal = fixNum + curSlider.value;
-        Debug.Log(newVal);
         curSlider.value = newVal;
         if (curSlider.value < curSlider.minValue)
         {
@@ -55,7 +53,31 @@ public class UIManager : MonoBehaviour
         {
             curSlider.value = curSlider.maxValue;
         }
-        Debug.Log(curSlider.value);
+
+
+
+        if (type == "Stamina")
+        {
+            if (regen != null)
+            {
+                StopCoroutine(regen);
+            }
+            Debug.Log("Starting refresh");
+            regen = StartCoroutine(RegenStamina(type));
+        }
+    }
+
+    public IEnumerator RegenStamina(string type)
+    {
+        yield return new WaitForSeconds(1);
+        Slider curSlider = sliders[type];
+
+        while (pm.curStam < pm.maxStam)
+        {
+            curSlider.value += curSlider.maxValue / (100f / pm.staminaModifier) * Time.deltaTime;
+            pm.curStam += pm.maxStam / 20f * Time.deltaTime;
+            yield return null;
+        }
     }
 
 }

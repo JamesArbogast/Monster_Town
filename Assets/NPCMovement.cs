@@ -5,7 +5,13 @@ using UnityEngine;
 public class NPCMovement : MonoBehaviour
 {
     public float moveSpeed;
-    public Rigidbody2D myRigidbody;
+    public Rigidbody2D rigidBody;
+    public bool canMove;
+
+    //alignment
+    public bool hostile;
+
+    //walking
     public Vector2 minWalkPoint;
     public Vector2 maxWalkPoint;
     public bool isWalking;
@@ -25,12 +31,14 @@ public class NPCMovement : MonoBehaviour
     public bool walkingUpRight;
     public bool standingIdle;
     public Vector2 lastMove;
-    private Animator anim;
-
     public Collider2D walkZone;
     public bool hasWalkZone;
 
-    public bool canMove;
+    //animator
+    private Animator anim;
+
+    //attack
+    public bool attacking;
 
     //NPC dialogue variables
     public NPCDialogue npcDialogue;
@@ -42,7 +50,7 @@ public class NPCMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        myRigidbody = GameObject.Find("NPC").GetComponent<Rigidbody2D>();
+        rigidBody = GameObject.Find("NPC").GetComponent<Rigidbody2D>();
         dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         npcDialogue = FindObjectOfType<NPCDialogue>();
         player = GameObject.Find("Player");
@@ -77,7 +85,7 @@ public class NPCMovement : MonoBehaviour
 
         if (!canMove)
         {
-            myRigidbody.velocity = Vector2.zero;
+            rigidBody.velocity = Vector2.zero;
             return;
         }
 
@@ -88,7 +96,7 @@ public class NPCMovement : MonoBehaviour
             switch (walkDirection)
             {
                 case 0:
-                    myRigidbody.velocity = new Vector2(0, moveSpeed);
+                    rigidBody.velocity = new Vector2(0, moveSpeed);
                     walkingUp = true;
                     walkingDown = false;
                     walkingRight = false;
@@ -107,7 +115,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 1:
-                    myRigidbody.velocity = new Vector2(moveSpeed, 0);
+                    rigidBody.velocity = new Vector2(moveSpeed, 0);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = true;
@@ -126,7 +134,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 2:
-                    myRigidbody.velocity = new Vector2(0, -moveSpeed);
+                    rigidBody.velocity = new Vector2(0, -moveSpeed);
                     walkingUp = false;
                     walkingDown = true;
                     walkingRight = false;
@@ -145,7 +153,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 3:
-                    myRigidbody.velocity = new Vector2(-moveSpeed, 0);
+                    rigidBody.velocity = new Vector2(-moveSpeed, 0);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -164,7 +172,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 4:
-                    myRigidbody.velocity = new Vector2(-moveSpeed, -moveSpeed);
+                    rigidBody.velocity = new Vector2(-moveSpeed, -moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -183,7 +191,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 5:
-                    myRigidbody.velocity = new Vector2(moveSpeed, -moveSpeed);
+                    rigidBody.velocity = new Vector2(moveSpeed, -moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -202,7 +210,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 6:
-                    myRigidbody.velocity = new Vector2(-moveSpeed, moveSpeed);
+                    rigidBody.velocity = new Vector2(-moveSpeed, moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -221,7 +229,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 7:
-                    myRigidbody.velocity = new Vector2(moveSpeed, moveSpeed);
+                    rigidBody.velocity = new Vector2(moveSpeed, moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -251,7 +259,7 @@ public class NPCMovement : MonoBehaviour
         {
             waitCounter -= Time.deltaTime;
 
-            myRigidbody.velocity = Vector2.zero;
+            rigidBody.velocity = Vector2.zero;
 
             if (waitCounter < 0)
             {
@@ -286,4 +294,19 @@ public class NPCMovement : MonoBehaviour
 
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(attacking == true)
+        {
+            if(hostile == true)
+            {
+                if(other.tag == "Player")
+                {
+                    other.gameObject.GetComponent<PlayerMovement>().TakeDamage();
+                }
+            }
+        }
+    }
+
 }

@@ -10,7 +10,7 @@ public class PlayerActions : MonoBehaviour
     public float diagonalMoveModifier;
 
     private Animator anim;
-    private Rigidbody2D myRigidBody;
+    private Rigidbody2D rigidBody;
     public Vector3 playerPos;
 
     public bool playerMoving;
@@ -49,7 +49,7 @@ public class PlayerActions : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        myRigidBody = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         playerMoving = false;
 
@@ -77,12 +77,12 @@ public class PlayerActions : MonoBehaviour
         
         mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
         crosshair.transform.position = mousePos;
-        playerPos = myRigidBody.transform.position;
+        playerPos = rigidBody.transform.position;
 
         if (!canMove)
         {
             //Debug.Log("Cant move");
-            myRigidBody.velocity = Vector2.zero;
+            rigidBody.velocity = Vector2.zero;
             playerMoving = false;
             playerIdle = true;
             return;
@@ -97,8 +97,8 @@ public class PlayerActions : MonoBehaviour
             if (moveInput != Vector2.zero)
             {
                 Debug.Log("PlayerIsMoving");
-                myRigidBody.velocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
-                //Debug.Log(myRigidBody.velocity);
+                rigidBody.velocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+                //Debug.Log(rigidBody.velocity);
                 playerMoving = true;
                 lastMove = moveInput;
             }
@@ -110,14 +110,14 @@ public class PlayerActions : MonoBehaviour
             else
             {
                 //Debug.Log("IsntMoving");
-                /*myRigidBody.velocity = Vector2.zero;*/
+                /*rigidBody.velocity = Vector2.zero;*/
             }
 
             if (Input.GetKeyDown(KeyCode.J))
             {
                 attackTimeCounter = attackTime;
                 attacking = true;
-                myRigidBody.velocity = Vector2.zero;
+                rigidBody.velocity = Vector2.zero;
                 //Debug.Log("attacking");
                 anim.SetBool("Attack", true);
             }
@@ -148,13 +148,13 @@ public class PlayerActions : MonoBehaviour
         {
             aiming = true;
             crosshair.SetActive(true);
-            myRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
         }
         if(Input.GetKeyUp(KeyCode.E))
         {
             aiming = false;
             crosshair.SetActive(false);
-            myRigidBody.constraints = RigidbodyConstraints2D.None;
+            rigidBody.constraints = RigidbodyConstraints2D.None;
         }
 
         if (attackTimeCounter >= 0)

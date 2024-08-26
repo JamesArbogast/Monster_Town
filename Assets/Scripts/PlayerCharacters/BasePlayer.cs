@@ -26,6 +26,10 @@ public class BasePlayer : MonoBehaviour
     public int charisma;
     public int patience;
 
+    //stat modifiers
+    public int staminaModifier;
+    public int SpeedModifier;
+
     //unique traits and items
     public GameObject baseItem;
     public GameObject uniquePotentialItem;

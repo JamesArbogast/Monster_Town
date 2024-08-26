@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : BasePlayer
 {
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private float slideSpeed;
     private State state;
 
+    //UI manager
+    public UIManager uim;
+
+
     //attacks
     public GameObject projectile;
     private enum State
@@ -25,14 +29,25 @@ public class PlayerMovement : MonoBehaviour
         Interact
     }
 
+    //health
+    public float maxHealth = 100f;
+    public float minHealth = 0;
+    public float curHealth = 100f;
+
     //energy
-    public float maxEng = 20f;
+    public float maxEng = 100f;
     public float minEng = 0;
+    public float curEng = 100f;
 
     //stamina
-    public float maxStam = 20f;
+    public float maxStam = 100f;
     public float minStam = 0;
+    public float curStam = 100f;
 
+    private void Start()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {
@@ -149,19 +164,35 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            state = State.DodgeRollSliding;
-            slideDir = (newSpot - transform.position).normalized;
-            Debug.Log(slideDir);
-            slideSpeed = 40f;
+            int moddedN = 100 - (staminaModifier*25);
+            Debug.Log(moddedN);
+            if(curStam-(100-(staminaModifier*25)) > 0)
+            {
+                uim.UpdateSliderUI("Stamina", -(100-staminaModifier*25));
+                curStam -= (100 - staminaModifier*25);
+                state = State.DodgeRollSliding;
+                slideDir = (newSpot - transform.position).normalized;
+                slideSpeed = 40f;
+            }
+            else
+            {
+                FailedRoll();
+            }
         }
+    }
+
+    private void FailedRoll()
+    {
+        Debug.Log("Roll failed.");
     }
 
     private void HandleDodgeRollSliding()
     {
-        if(slideDir == new Vector3(1.0f, 0.0f, 0.0f))
+        /*if(slideDir == new Vector3(1.0f, 0.0f, 0.0f))
         {
             anim.SetBool("RollRight", true);
         }
+        */
         transform.position += slideDir * slideSpeed * Time.deltaTime;
         slideSpeed -= slideSpeed * 9f * Time.deltaTime;
         if(slideSpeed < 5f)
@@ -169,5 +200,10 @@ public class PlayerMovement : MonoBehaviour
             state = State.Normal;
             anim.SetBool("RollRight", false);
         }
+    }
+
+    public void TakeDamage()
+    {
+        Debug.Log("Taking damage");
     }
 }
