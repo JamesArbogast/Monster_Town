@@ -12,11 +12,12 @@ public class PlayerMovement : BasePlayer
     //extra movements
     private Vector3 slideDir;
     private Vector3 newSpot;
-    private float slideSpeed;
+    public float slideSpeed;
     private State state;
 
     //UI manager
     public UIManager uim;
+    public StaminaManager sm;
 
 
     //attacks
@@ -164,15 +165,13 @@ public class PlayerMovement : BasePlayer
     {
         if (Input.GetMouseButtonDown(1))
         {
-            int moddedN = 100 - (staminaModifier*25);
-            Debug.Log(moddedN);
-            if(curStam-(100-(staminaModifier*25)) > 0)
+            sm.UseStamina(25);
+            if (sm.succesfullRoll)
             {
-                uim.UpdateSliderUI("Stamina", -(100-staminaModifier*25));
-                curStam -= (100 - staminaModifier*25);
-                state = State.DodgeRollSliding;
-                slideDir = (newSpot - transform.position).normalized;
-                slideSpeed = 40f;
+                sm.succesfullRoll = false;
+                HandleDodgeRollSliding();
+                Debug.Log("Roll completed.");
+                StartCoroutine(sm.RegenStamina());
             }
             else
             {
@@ -186,15 +185,17 @@ public class PlayerMovement : BasePlayer
         Debug.Log("Roll failed.");
     }
 
-    private void HandleDodgeRollSliding()
+    public void HandleDodgeRollSliding()
     {
-        /*if(slideDir == new Vector3(1.0f, 0.0f, 0.0f))
-        {
-            anim.SetBool("RollRight", true);
-        }
-        */
+        //if(slideDir == new Vector3(1.0f, 0.0f, 0.0f))
+        //{
+        //    anim.SetBool("RollRight", true);
+        //}
+
+        Debug.Log("Rollin");
         transform.position += slideDir * slideSpeed * Time.deltaTime;
         slideSpeed -= slideSpeed * 9f * Time.deltaTime;
+        //print(slideSpeed);
         if(slideSpeed < 5f)
         {
             state = State.Normal;
