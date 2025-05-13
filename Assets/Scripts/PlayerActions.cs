@@ -82,7 +82,7 @@ public class PlayerActions : MonoBehaviour
         if (!canMove)
         {
             //Debug.Log("Cant move");
-            rigidBody.velocity = Vector2.zero;
+            rigidBody.linearVelocity = Vector2.zero;
             playerMoving = false;
             playerIdle = true;
             return;
@@ -97,7 +97,7 @@ public class PlayerActions : MonoBehaviour
             if (moveInput != Vector2.zero)
             {
                 Debug.Log("PlayerIsMoving");
-                rigidBody.velocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+                rigidBody.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
                 //Debug.Log(rigidBody.velocity);
                 playerMoving = true;
                 lastMove = moveInput;
@@ -117,7 +117,7 @@ public class PlayerActions : MonoBehaviour
             {
                 attackTimeCounter = attackTime;
                 attacking = true;
-                rigidBody.velocity = Vector2.zero;
+                rigidBody.linearVelocity = Vector2.zero;
                 //Debug.Log("attacking");
                 anim.SetBool("Attack", true);
             }
@@ -136,7 +136,7 @@ public class PlayerActions : MonoBehaviour
                 aim = aim * 0.70f;
                 GameObject projectile = Instantiate(projectilePrefab, playerPos, Quaternion.Euler(0, 0, -45));
                 projectile.transform.position = Vector2.MoveTowards(playerPos, aim, 0f);
-                projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(aim.x, aim.y) * 10f;
+                projectile.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(aim.x, aim.y) * 10f;
                 projectile.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg);
                 Destroy(projectile, 3);
             }

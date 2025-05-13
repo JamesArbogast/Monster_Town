@@ -85,7 +85,7 @@ public class NPCMovement : MonoBehaviour
 
         if (!canMove)
         {
-            rigidBody.velocity = Vector2.zero;
+            rigidBody.linearVelocity = Vector2.zero;
             return;
         }
 
@@ -96,7 +96,7 @@ public class NPCMovement : MonoBehaviour
             switch (walkDirection)
             {
                 case 0:
-                    rigidBody.velocity = new Vector2(0, moveSpeed);
+                    rigidBody.linearVelocity = new Vector2(0, moveSpeed);
                     walkingUp = true;
                     walkingDown = false;
                     walkingRight = false;
@@ -115,7 +115,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 1:
-                    rigidBody.velocity = new Vector2(moveSpeed, 0);
+                    rigidBody.linearVelocity = new Vector2(moveSpeed, 0);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = true;
@@ -134,7 +134,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 2:
-                    rigidBody.velocity = new Vector2(0, -moveSpeed);
+                    rigidBody.linearVelocity = new Vector2(0, -moveSpeed);
                     walkingUp = false;
                     walkingDown = true;
                     walkingRight = false;
@@ -153,7 +153,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 3:
-                    rigidBody.velocity = new Vector2(-moveSpeed, 0);
+                    rigidBody.linearVelocity = new Vector2(-moveSpeed, 0);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -172,7 +172,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 4:
-                    rigidBody.velocity = new Vector2(-moveSpeed, -moveSpeed);
+                    rigidBody.linearVelocity = new Vector2(-moveSpeed, -moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -191,7 +191,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 5:
-                    rigidBody.velocity = new Vector2(moveSpeed, -moveSpeed);
+                    rigidBody.linearVelocity = new Vector2(moveSpeed, -moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -210,7 +210,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 6:
-                    rigidBody.velocity = new Vector2(-moveSpeed, moveSpeed);
+                    rigidBody.linearVelocity = new Vector2(-moveSpeed, moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -229,7 +229,7 @@ public class NPCMovement : MonoBehaviour
                     break;
 
                 case 7:
-                    rigidBody.velocity = new Vector2(moveSpeed, moveSpeed);
+                    rigidBody.linearVelocity = new Vector2(moveSpeed, moveSpeed);
                     walkingUp = false;
                     walkingDown = false;
                     walkingRight = false;
@@ -259,7 +259,7 @@ public class NPCMovement : MonoBehaviour
         {
             waitCounter -= Time.deltaTime;
 
-            rigidBody.velocity = Vector2.zero;
+            rigidBody.linearVelocity = Vector2.zero;
 
             if (waitCounter < 0)
             {

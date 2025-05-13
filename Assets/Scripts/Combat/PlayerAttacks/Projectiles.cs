@@ -14,7 +14,7 @@ public class Projectiles : MonoBehaviour
 
     public void SetUp(Vector2 velocity, Vector3 direction)
     {
-        myRb.velocity = velocity.normalized * speed;
+        myRb.linearVelocity = velocity.normalized * speed;
         transform.rotation = Quaternion.Euler(direction);
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     private const float MOVE_SPEED = 10f;
+    [SerializeField] private LayerMask dashLayerMask;
     private Rigidbody2D rgdbdy2D;
     private Vector2 moveSpeed;
     private Vector3 curMoveDir;
@@ -80,12 +81,17 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rgdbdy2D.velocity = curMoveDir * MOVE_SPEED;
+        rgdbdy2D.linearVelocity = curMoveDir * MOVE_SPEED;
 
         if(isDashActive)
         {
             float dashAmnt = 10f;
-            rgdbdy2D.MovePosition(transform.position + curMoveDir * dashAmnt);
+            Vector3 dashPosition = transform.position + curMoveDir * dashAmnt;
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, curMoveDir, dashAmnt, dashLayerMask);
+            if(raycastHit2D.collider != null)
+            {
+                dashPosition = raycastHit2D.point;
+            }
             isDashActive = false;
         }
     }
