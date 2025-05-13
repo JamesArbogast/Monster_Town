@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : BasePlayer
 {
+    [SerializeField]
+    private float speed;
     public float moveSpeed = 5f;
-    public Rigidbody2D rb;
+    public Rigidbody2D rigidBody;
     public Vector2 movement;
+    public Vector2 movementInput;
     public Animator anim;
 
     //extra movements
@@ -45,11 +49,12 @@ public class PlayerMovement : BasePlayer
     public float minStam = 0;
     public float curStam = 100f;
 
-    private void Start()
+    private void Awake()
     {
-        
+        rigidBody = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
+    /*
     void Update()
     {
         //Input
@@ -116,17 +121,24 @@ public class PlayerMovement : BasePlayer
         }
 
         //projectile
-        if(Input.GetKeyDown("space"))
+        if(Input.GetKeyDown("Space"))
         {
+            Debug.Log("Projectile triggered.");
             StartCoroutine(ProjectileAttack());
         }
 
     }
+    */
 
     private void FixedUpdate()
     {
         //Movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rigidBody.linearVelocity = movementInput * speed;
+    }
+
+    private void OnMove(InputValue inputValue)
+    {
+        movementInput = inputValue.Get<Vector2>();
     }
 
     //attacks

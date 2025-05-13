@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    private const float MOVE_SPEED = 10f;
+    [SerializeField] public float MOVE_SPEED;
     [SerializeField] private LayerMask dashLayerMask;
     private Rigidbody2D rgdbdy2D;
     private Vector2 moveSpeed;
@@ -44,7 +44,6 @@ public class CharacterController : MonoBehaviour
 
         // normalized move direction
         curMoveDir = new Vector3(moveX, moveY).normalized;
-        Debug.Log(curMoveDir);
 
         //setting animation logic for character movement
         anim.SetFloat("Horizontal", moveX);
@@ -70,7 +69,6 @@ public class CharacterController : MonoBehaviour
     private void SetFaceDirection(Vector3 dir)
     {
         //Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
-        Debug.Log(dir);
         lastMoveDir = dir;
         if(lastMoveDir == new Vector3(+1f,0,0))
         {
