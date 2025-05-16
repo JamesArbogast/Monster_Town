@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StaminaManager : MonoBehaviour
 {
     public Slider stamSlider;
-    public PlayerMovement pm;
+    public CharacterController pm;
     public float currentStamina;
     public bool succesfullRoll = false;
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
@@ -24,7 +24,7 @@ public class StaminaManager : MonoBehaviour
     void Start()
     {
         stamSlider = gameObject.GetComponent<Slider>(); ;
-        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        pm = GameObject.Find("Player").GetComponent<CharacterController>();
         stamSlider.maxValue = pm.maxEng;
         currentStamina = pm.maxEng;
         stamSlider.value = currentStamina;

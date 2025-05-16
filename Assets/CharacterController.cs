@@ -1,24 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class CharacterController : MonoBehaviour
+public class CharacterController : BasePlayer
 {
-    [SerializeField] public float MOVE_SPEED;
-    [SerializeField] private LayerMask dashLayerMask;
+    [SerializeField] 
+    public float speed;
     private Rigidbody2D rgdbdy2D;
+    private Vector2 movementInput;
+    private Vector2 smoothedMovementInput;
+    private Vector2 movementInputSmoothVelocity;
+
+    /*
+    [SerializeField] private LayerMask dashLayerMask;
     private Vector2 moveSpeed;
     private Vector3 curMoveDir;
     private Vector3 lastMoveDir;
     private Animator anim;
     private bool isDashActive;
-
+    */
     private void Awake()
     {
         rgdbdy2D = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
+    /*
     private void Update()
     {
 
@@ -65,7 +73,6 @@ public class CharacterController : MonoBehaviour
             isDashActive = true;
         }
     }
-
     private void SetFaceDirection(Vector3 dir)
     {
         //Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
@@ -76,11 +83,18 @@ public class CharacterController : MonoBehaviour
         }
         //gameObject.transform.LookAt(lookDirection);
     }
+    */
 
     private void FixedUpdate()
     {
-        rgdbdy2D.linearVelocity = curMoveDir * MOVE_SPEED;
+        smoothedMovementInput = Vector2.SmoothDamp(
+            smoothedMovementInput,
+            movementInput,
+            ref movementInputSmoothVelocity,
+            0.1f);
 
+        rgdbdy2D.linearVelocity = smoothedMovementInput * speed;
+        /*
         if(isDashActive)
         {
             float dashAmnt = 10f;
@@ -92,5 +106,10 @@ public class CharacterController : MonoBehaviour
             }
             isDashActive = false;
         }
+        */
+    }
+    private void OnMove(InputValue inputValue)
+    {
+        movementInput = inputValue.Get<Vector2>();
     }
 }

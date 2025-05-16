@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour
 {
     public Slider healthSlider;
-    public PlayerMovement pm;
+    public CharacterController pm;
 
     // Start is called before the first frame update
     void Start()
     {
-        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        pm = GameObject.Find("Player").GetComponent<CharacterController>();
         healthSlider.maxValue = pm.maxStam;
         healthSlider.value = pm.maxStam;
     }

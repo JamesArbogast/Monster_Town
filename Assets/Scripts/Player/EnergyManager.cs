@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class EngManager : MonoBehaviour
 {
     public Slider energySlider;
-    public PlayerMovement pm;
+    public CharacterController pm;
 
     // Start is called before the first frame update
     void Start()
     {
-        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        pm = GameObject.Find("Player").GetComponent<CharacterController>();
         energySlider.maxValue = pm.maxEng;
         energySlider.value = pm.maxEng;
     }

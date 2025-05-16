@@ -20,6 +20,15 @@ public class BasePlayer : MonoBehaviour
 
     public Types types;
 
+    //status and health stats
+    public int maxHealth;
+    public int curHealth;
+    public int maxStam;
+    public int curStam;
+    public int maxEng;
+    public int curEng;
+
+
     //stats
     public int attack;
     public int innovation;
@@ -37,6 +46,7 @@ public class BasePlayer : MonoBehaviour
 
     //inventory
     public int gold;
+
 
 
     // Start is called before the first frame update
