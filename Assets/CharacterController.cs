@@ -7,10 +7,13 @@ public class CharacterController : BasePlayer
 {
     [SerializeField] 
     public float speed;
+    [SerializeField]
+    private float rotationSpeed;
     private Rigidbody2D rgdbdy2D;
     private Vector2 movementInput;
     private Vector2 smoothedMovementInput;
     private Vector2 movementInputSmoothVelocity;
+
 
     /*
     [SerializeField] private LayerMask dashLayerMask;
@@ -87,13 +90,8 @@ public class CharacterController : BasePlayer
 
     private void FixedUpdate()
     {
-        smoothedMovementInput = Vector2.SmoothDamp(
-            smoothedMovementInput,
-            movementInput,
-            ref movementInputSmoothVelocity,
-            0.1f);
+        SetPlayerVelocity();
 
-        rgdbdy2D.linearVelocity = smoothedMovementInput * speed;
         /*
         if(isDashActive)
         {
@@ -107,6 +105,16 @@ public class CharacterController : BasePlayer
             isDashActive = false;
         }
         */
+    }
+    void SetPlayerVelocity()
+    {
+        smoothedMovementInput = Vector2.SmoothDamp(
+            smoothedMovementInput,
+            movementInput,
+            ref movementInputSmoothVelocity,
+            0.1f);
+
+        rgdbdy2D.linearVelocity = smoothedMovementInput * speed;
     }
     private void OnMove(InputValue inputValue)
     {
