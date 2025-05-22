@@ -91,6 +91,7 @@ public class CharacterController : BasePlayer
     private void FixedUpdate()
     {
         SetPlayerVelocity();
+        RotateInDirectionOfInput();
 
         /*
         if(isDashActive)
@@ -116,6 +117,18 @@ public class CharacterController : BasePlayer
 
         rgdbdy2D.linearVelocity = smoothedMovementInput * speed;
     }
+
+    private void RotateInDirectionOfInput()
+    {
+        if (movementInput != Vector2.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, smoothedMovementInput);
+            Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            rgdbdy2D.MoveRotation(rotation);
+        }
+    }
+
     private void OnMove(InputValue inputValue)
     {
         movementInput = inputValue.Get<Vector2>();
