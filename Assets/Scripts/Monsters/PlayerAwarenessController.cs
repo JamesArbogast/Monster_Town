@@ -23,9 +23,7 @@ public class PlayerAwarenessController : MonoBehaviour
         Vector2 enemyToPlayerVector = player.position - transform.position;
         DirectionToPlayer = enemyToPlayerVector.normalized;
         Debug.Log(enemyToPlayerVector);
-
-        Debug.Log(enemyToPlayerVector.magnitude);
-        if (DirectionToPlayer.magnitude <= playerAwarenessDistance)
+        if (enemyToPlayerVector.magnitude <= playerAwarenessDistance)
         {
             AwareOfPlayer = true;
             Debug.Log("Aware of player!");
