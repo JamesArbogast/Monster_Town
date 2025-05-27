@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\PlayerCharacters\CivilianMale.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\InventoryManagement.cs" />
+    <Compile Include="Assets\Scripts\Monsters\PlayerAwarenessController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\LevelChanger.cs" />
     <Compile Include="Assets\ReturnToCharacterSelectButton.cs" />
+    <Compile Include="Assets\Scripts\Monsters\MonsterMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Items\PickupItems\EnergyPowerUp.cs" />
     <Compile Include="Assets\EnergyManager.cs" />
@@ -126,7 +128,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\ObjectGold.cs" />
-    <Compile Include="Assets\MonsterMovement.cs" />
     <Compile Include="Assets\Scripts\Items\ItemMain\Item.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\HunterMale.cs" />
     <Compile Include="Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs" />
