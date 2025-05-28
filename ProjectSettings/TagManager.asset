@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - NPC
   - LootCrate
@@ -55,12 +55,6 @@ TagManager:
   - name: Dirt
     uniqueID: 3405323247
     locked: 0
-  - name: Monster
-    uniqueID: 3671501475
-    locked: 0
-  - name: Projectiles
-    uniqueID: 2138770499
-    locked: 0
   - name: Stone
     uniqueID: 3519188517
     locked: 0
@@ -79,8 +73,14 @@ TagManager:
   - name: Signs
     uniqueID: 3581672447
     locked: 0
+  - name: Monster
+    uniqueID: 3671501475
+    locked: 0
   - name: Player
     uniqueID: 1229792089
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2138770499
     locked: 0
   - name: NPC
     uniqueID: 110126805
@@ -91,3 +91,5 @@ TagManager:
   - name: Item
     uniqueID: 3941103189
     locked: 0
+  m_RenderingLayers:
+  - Default
