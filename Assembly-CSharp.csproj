@@ -120,6 +120,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Items\PickupItems\EnergyPowerUp.cs" />
     <Compile Include="Assets\EnergyManager.cs" />
+    <Compile Include="Assets\Scripts\Combat\PlayerAttacks\PlayerShoot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\CharacterUIInfo.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />

@@ -18,11 +18,12 @@ public class Projectiles : MonoBehaviour
         transform.rotation = Quaternion.Euler(direction);
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
