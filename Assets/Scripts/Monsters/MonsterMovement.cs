@@ -11,12 +11,14 @@ public class MonsterMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private PlayerAwarenessController playerAwarenessController;
     private Vector2 targetDirection;
+    private float changeDirectionCD;
 
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         playerAwarenessController = GetComponent<PlayerAwarenessController>();
+        targetDirection = transform.up;
 
     }
 
@@ -28,25 +30,35 @@ public class MonsterMovement : MonoBehaviour
         SetVelocity();
     }
 
+
     private void UpdateTargetDirection()
     {
-        if(playerAwarenessController.AwareOfPlayer)
+        HandleRandomDirectionChange();
+        HandlePlayerTargeting();
+    }
+    private void HandleRandomDirectionChange()
+    {
+        changeDirectionCD -= Time.deltaTime;
+        if (changeDirectionCD <=0)
         {
-            targetDirection = playerAwarenessController.DirectionToPlayer;
-        }
-        else
-        {
-            targetDirection = Vector2.zero;
+            float angleChange = Random.Range(-90f, 90f);
+            Quaternion rotation = Quaternion.AngleAxis(angleChange, transform.forward);
+            targetDirection = rotation * targetDirection;
+
+            changeDirectionCD = Random.Range(1f, 5f);
         }
     }
 
+    private void HandlePlayerTargeting()
+    {
+        if (playerAwarenessController.AwareOfPlayer)
+        {
+            targetDirection = playerAwarenessController.DirectionToPlayer;
+        }
+    }    
+
     private void RotateTowardsTarget()
     {
-        if (targetDirection == Vector2.zero)
-        {
-            return;
-        }
-
         Quaternion targetRotation = Quaternion.LookRotation(transform.forward, targetDirection);
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         _rigidbody.SetRotation(rotation);
@@ -54,13 +66,6 @@ public class MonsterMovement : MonoBehaviour
 
     private void SetVelocity()
     {
-        if (targetDirection == Vector2.zero)
-        {
-            _rigidbody.linearVelocity = Vector2.zero;
-        }
-        else
-        {
-            _rigidbody.linearVelocity = transform.up * speed;
-        }
+        _rigidbody.linearVelocity = transform.up * speed;
     }
 }

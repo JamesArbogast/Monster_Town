@@ -13,6 +13,9 @@ public class PlayerShoot : MonoBehaviour
     private Transform gunOffset;
 
     [SerializeField]
+    private float projectileRotationOffset;
+
+    [SerializeField]
     private float timeBetweenShots;
 
     private bool fireContinuously;
