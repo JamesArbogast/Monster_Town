@@ -8,10 +8,13 @@ public class MonsterMovement : MonoBehaviour
     private float speed;
     [SerializeField]
     public float rotationSpeed;
+    [SerializeField]
+    private float screenBorder;
     private Rigidbody2D _rigidbody;
     private PlayerAwarenessController playerAwarenessController;
     private Vector2 targetDirection;
     private float changeDirectionCD;
+    private Camera _camera;
 
 
     private void Awake()
@@ -19,6 +22,7 @@ public class MonsterMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         playerAwarenessController = GetComponent<PlayerAwarenessController>();
         targetDirection = transform.up;
+        _camera = Camera.main;
 
     }
 
@@ -35,6 +39,7 @@ public class MonsterMovement : MonoBehaviour
     {
         HandleRandomDirectionChange();
         HandlePlayerTargeting();
+        HandleEnemyOffScreen();
     }
     private void HandleRandomDirectionChange()
     {
@@ -56,6 +61,23 @@ public class MonsterMovement : MonoBehaviour
             targetDirection = playerAwarenessController.DirectionToPlayer;
         }
     }    
+
+    private void HandleEnemyOffScreen()
+    {
+        Vector2 screenPos = _camera.WorldToScreenPoint(transform.position);
+        //Debug.Log(screenPos.x + ", " + screenPos.y);
+        if ((screenPos.x < screenBorder && targetDirection.x < 0) ||
+            (screenPos.x > _camera.pixelWidth - screenBorder && targetDirection.x > 0))
+        {
+            targetDirection = new Vector2(-targetDirection.x, targetDirection.y);
+        }
+
+        if ((screenPos.y < screenBorder && targetDirection.y < 0) ||
+            (screenPos.y > _camera.pixelHeight - screenBorder && targetDirection.y > 0))
+        {
+            targetDirection = new Vector2(targetDirection.x, -targetDirection.y);
+        }
+    }
 
     private void RotateTowardsTarget()
     {

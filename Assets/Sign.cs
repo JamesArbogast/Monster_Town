@@ -15,7 +15,7 @@ public class Sign : MonoBehaviour
 
     private void Awake()
     {
-        dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+        //dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         //dialogueText = dialogueBox.GetComponent<Text>();
     }
 

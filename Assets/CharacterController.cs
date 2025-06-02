@@ -9,10 +9,17 @@ public class CharacterController : BasePlayer
     public float speed;
     [SerializeField]
     private float rotationSpeed;
+    [SerializeField]
+    private float screenBorder;
+
     private Rigidbody2D rgdbdy2D;
+    private PlayerAwarenessController playerAwarenessController;
+    private Vector2 targetDirection;
     private Vector2 movementInput;
     private Vector2 smoothedMovementInput;
     private Vector2 movementInputSmoothVelocity;
+    [SerializeField]
+    private Camera _camera;
 
 
     /*
@@ -27,6 +34,7 @@ public class CharacterController : BasePlayer
     {
         rgdbdy2D = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
+        _camera = Camera.main;
     }
 
     /*
@@ -90,8 +98,8 @@ public class CharacterController : BasePlayer
 
     private void FixedUpdate()
     {
-        SetPlayerVelocity();
         RotateInDirectionOfInput();
+        SetPlayerVelocity();
 
         /*
         if(isDashActive)
@@ -116,6 +124,8 @@ public class CharacterController : BasePlayer
             0.1f);
 
         rgdbdy2D.linearVelocity = smoothedMovementInput * speed;
+
+        PreventPlayerMoveOffScreen();
     }
 
     private void RotateInDirectionOfInput()
@@ -126,6 +136,23 @@ public class CharacterController : BasePlayer
             Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
             rgdbdy2D.MoveRotation(rotation);
+        }
+    }
+
+    private void PreventPlayerMoveOffScreen()
+    {
+        Vector2 screenPos = _camera.WorldToScreenPoint(transform.position);
+        //Debug.Log(screenPos.x + ", " + screenPos.y);
+        if ((screenPos.x < screenBorder && rgdbdy2D.linearVelocity.x < 0) ||
+            (screenPos.x > _camera.pixelWidth - screenBorder && rgdbdy2D.linearVelocity.x > 0))
+        {
+            rgdbdy2D.linearVelocity = new Vector2(0, rgdbdy2D.linearVelocity.y);
+        }
+
+        if ((screenPos.y < screenBorder && rgdbdy2D.linearVelocity.y < 0) ||
+            (screenPos.y > _camera.pixelHeight - screenBorder && rgdbdy2D.linearVelocity.y > 0))
+        {
+            rgdbdy2D.linearVelocity = new Vector2(rgdbdy2D.linearVelocity.x, 0);
         }
     }
 

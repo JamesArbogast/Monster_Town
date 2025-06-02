@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128988696836018371}
   - component: {fileID: 6421823423958611608}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,9 +97,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2451292070436654371}
   - component: {fileID: 1903621442840080678}
-  - component: {fileID: 7879235899504678310}
   - component: {fileID: 565174353502758588}
-  m_Layer: 0
+  - component: {fileID: 8767034661302032712}
+  m_Layer: 10
   m_Name: Arrow01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 8850132452125210023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43621, y: -0.01124, z: 0}
+  m_LocalPosition: {x: -2.099, y: -2.008, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -149,7 +149,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &7879235899504678310
+--- !u!114 &565174353502758588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850132452125210023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d463a723efd74244958d1383b5735f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  myRb: {fileID: 0}
+--- !u!60 &8767034661302032712
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,37 +200,18 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.11, y: 0.13}
-      - {x: 0.04638001, y: 0.1246995}
-      - {x: 0.02, y: 0.099999994}
-      - {x: -0.14223848, y: -0.06234105}
-      - {x: -0.14999999, y: -0.099999994}
-      - {x: -0.099999994, y: -0.14999999}
-      - {x: -0.066360086, y: -0.14291939}
-      - {x: -0.02, y: -0.099999994}
-      - {x: 0.13, y: 0.04}
-      - {x: 0.13, y: 0.11}
+    - - {x: 0.0039426014, y: 0.16415465}
+      - {x: -0.043883264, y: 0.10935204}
+      - {x: -0.045217395, y: -0.16227633}
+      - {x: 0.036536492, y: -0.1622761}
+      - {x: 0.048223674, y: 0.11803329}
   m_UseDelaunayMesh: 0
---- !u!114 &565174353502758588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850132452125210023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d463a723efd74244958d1383b5735f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  myRb: {fileID: 0}
