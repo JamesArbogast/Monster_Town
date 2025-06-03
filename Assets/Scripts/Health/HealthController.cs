@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthController : MonoBehaviour
 {
@@ -15,18 +16,31 @@ public class HealthController : MonoBehaviour
         }
     }
 
+    public bool isInvincible { get; set; }
+
+    public UnityEvent OnDied;
+    public UnityEvent OnDamaged;
+
     public void TakeDamage(float damageAmount)
     {
-        if (currentHealth == 0)
-        {
-            return;
-        }
+        if (currentHealth == 0 || isInvincible) return;
+
+        //if (isInvincible) return;
 
         currentHealth -= damageAmount;
 
         if (currentHealth < 0)
         {
             currentHealth = 0;
+        }
+
+        if (currentHealth == 0)
+        {
+            OnDied.Invoke();
+        }
+        else
+        {
+            OnDamaged.Invoke();
         }
     }
 
