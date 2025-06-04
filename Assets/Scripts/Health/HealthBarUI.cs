@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class HealthBarUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private UnityEngine.UI.Image healthBarForegroundImage;
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateHealthBar(HealthController healthController)
     {
-        
+        healthBarForegroundImage.fillAmount = healthController.RemainingHealthPercentage;
     }
 }
