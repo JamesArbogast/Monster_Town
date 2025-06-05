@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4832611198151974355}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -623465821
   m_SortingLayer: 10
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1321746438, guid: d970e8b05ffa93a4ebb2ad05683cffdf, type: 3}
+  m_Sprite: {fileID: -720778814, guid: 5d96b93e3fadc174f83b39e416267ac1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6777882345098869615}
   - component: {fileID: 2404021591845741664}
   - component: {fileID: 1625511347811199612}
+  - component: {fileID: 5888539407493381108}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -229,3 +230,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 20
+--- !u!95 &5888539407493381108
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9122647631885793654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 215f3c82c2a5a564dacc0306b9a95e3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
