@@ -30,7 +30,7 @@ public class MonsterMovement : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateTargetDirection();
-        RotateTowardsTarget();
+        //RotateTowardsTarget();
         SetVelocity();
     }
 
@@ -88,6 +88,6 @@ public class MonsterMovement : MonoBehaviour
 
     private void SetVelocity()
     {
-        _rigidbody.linearVelocity = transform.up * speed;
+        _rigidbody.linearVelocity = targetDirection * speed;
     }
 }

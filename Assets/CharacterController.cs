@@ -16,10 +16,17 @@ public class CharacterController : BasePlayer
     private PlayerAwarenessController playerAwarenessController;
     private Vector2 targetDirection;
     private Vector2 movementInput;
+    public Vector2 animMoveInput;
     private Vector2 smoothedMovementInput;
     private Vector2 movementInputSmoothVelocity;
+    public Vector2 lastMove;
+    private bool playerIdle;
+    private bool playerMoving;
+
     [SerializeField]
     private Camera _camera;
+    private Animator anim;
+
 
 
     /*
@@ -37,64 +44,33 @@ public class CharacterController : BasePlayer
         _camera = Camera.main;
     }
 
-    /*
-    private void Update()
+    private void Start()
     {
-
-        float moveX = 0f;
-        float moveY = 0f;
-
-        if(Input.GetKey(KeyCode.W))
-        {
-            moveY = +1f;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            moveY = -1f;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveX = -1f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveX = +1f;
-        }
-
-        // normalized move direction
-        curMoveDir = new Vector3(moveX, moveY).normalized;
-
-        //setting animation logic for character movement
-        anim.SetFloat("Horizontal", moveX);
-        anim.SetFloat("Vertical", moveY);
-        //Input
-        moveSpeed.x = Input.GetAxisRaw("Horizontal");
-        moveSpeed.y = Input.GetAxisRaw("Vertical");
-        anim.SetFloat("Speed", moveSpeed.sqrMagnitude);
-        lastMoveDir = curMoveDir;
-
-        if (curMoveDir != new Vector3(0, 0, 0))
-        {
-            //End movment with character face direction
-            SetFaceDirection(curMoveDir);
-        }
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            isDashActive = true;
-        }
+        anim = GetComponent<Animator>();
     }
-    private void SetFaceDirection(Vector3 dir)
+
+
+    void Update()
     {
-        //Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
-        lastMoveDir = dir;
-        if(lastMoveDir == new Vector3(+1f,0,0))
+        animMoveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            anim.Play("IdleRight");
+            playerMoving = true;
+            playerIdle = false;
+            anim.SetBool("PlayerMoving", playerMoving);
+            anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
+            anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
+            anim.SetFloat("LastMoveX", lastMove.x);
+            anim.SetFloat("LastMoveY", lastMove.y);
         }
-        //gameObject.transform.LookAt(lookDirection);
+        else
+        {
+            playerIdle = true;
+            playerMoving = false;
+            anim.SetBool("PlayerIdle", playerIdle);
+        }
+        lastMove = animMoveInput;
     }
-    */
 
     private void FixedUpdate()
     {
@@ -124,7 +100,7 @@ public class CharacterController : BasePlayer
             0.1f);
 
         rgdbdy2D.linearVelocity = smoothedMovementInput * speed;
-
+        playerMoving = true;
         PreventPlayerMoveOffScreen();
     }
 
