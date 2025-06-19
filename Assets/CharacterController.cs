@@ -42,40 +42,46 @@ public class CharacterController : BasePlayer
         rgdbdy2D = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
         _camera = Camera.main;
+        anim = GetComponent<Animator>();
     }
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+
     }
 
 
     void Update()
     {
-        animMoveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-        {
-            playerMoving = true;
-            playerIdle = false;
-            anim.SetBool("PlayerMoving", playerMoving);
-            anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
-            anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
-            anim.SetFloat("LastMoveX", lastMove.x);
-            anim.SetFloat("LastMoveY", lastMove.y);
-        }
-        else
-        {
-            playerIdle = true;
-            playerMoving = false;
-            anim.SetBool("PlayerIdle", playerIdle);
-        }
-        lastMove = animMoveInput;
+
+    }
+
+    private void SetMovementAnimation(bool move)
+    {
+
+        bool isMoving = movementInput != Vector2.zero;
+        anim.SetBool("PlayerMoving", isMoving);
+        anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
+        anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
+        anim.SetFloat("LastMoveX", lastMove.x);
+        anim.SetFloat("LastMoveY", lastMove.y);
     }
 
     private void FixedUpdate()
     {
         RotateInDirectionOfInput();
         SetPlayerVelocity();
+
+        animMoveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if (rgdbdy2D.linearVelocity.magnitude != 0)
+        {
+            SetMovementAnimation(true);
+        }
+        else
+        {
+            SetMovementAnimation(false);
+        }
+        lastMove = animMoveInput;
 
         /*
         if(isDashActive)
