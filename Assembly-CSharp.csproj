@@ -82,6 +82,7 @@
     <Compile Include="Assets\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Items\ItemMain\Equipment\Equipment.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+    <Compile Include="Assets\Scripts\Monsters\MonsterDestroyController.cs" />
     <Compile Include="Assets\Scripts\Monsters\BaseMonster\Monster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\UIManager.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Assets\SelectCharacter.cs" />
     <Compile Include="Assets\Scripts\Monsters\MonsterSpawner.cs" />
     <Compile Include="Assets\DamageTrigger.cs" />
+    <Compile Include="Assets\Scripts\Scoring\ScoreController.cs" />
     <Compile Include="Assets\Gold.cs" />
     <Compile Include="Assets\NPCMovement.cs" />
     <Compile Include="Assets\NPCDialogue.cs" />

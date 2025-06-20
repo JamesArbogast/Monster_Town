@@ -28,8 +28,9 @@ public class Projectiles : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(this.gameObject);
-            Destroy(collision.gameObject);
+            HealthController healthController = collision.GetComponent<HealthController>();
+            healthController.TakeDamage(10);
+            Destroy(gameObject);
         }
     }
 
