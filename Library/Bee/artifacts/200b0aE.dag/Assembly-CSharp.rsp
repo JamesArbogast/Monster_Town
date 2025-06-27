@@ -444,6 +444,7 @@
 "Assets/Scripts/Monsters/MonsterAttack.cs"
 "Assets/Scripts/Monsters/MonsterDestroyController.cs"
 "Assets/Scripts/Monsters/MonsterMovement.cs"
+"Assets/Scripts/Monsters/MonsterScoreAllocator.cs"
 "Assets/Scripts/Monsters/MonsterSpawner.cs"
 "Assets/Scripts/Monsters/PlayerAwarenessController.cs"
 "Assets/Scripts/Player/EnergyManager.cs"
