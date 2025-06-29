@@ -430,6 +430,7 @@
 "Assets/SampleScenes/Scripts/SlowMoButton.cs"
 "Assets/Scripts/Camera/CameraMovement.cs"
 "Assets/Scripts/Collectibles/Collectible.cs"
+"Assets/Scripts/Collectibles/CollectibleSpawner.cs"
 "Assets/Scripts/Collectibles/HealthCollectibleBehavior.cs"
 "Assets/Scripts/Collectibles/ICollectibleBehaviour.cs"
 "Assets/Scripts/Combat/PlayerAttacks/PlayerShoot.cs"

@@ -146,6 +146,7 @@
     <Compile Include="Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\CursorsAndCrosshairs\CursorChanger.cs" />
+    <Compile Include="Assets\Scripts\Collectibles\CollectibleSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\ClockUI.cs" />
     <Compile Include="Assets\HoverEffects.cs" />
