@@ -85,12 +85,14 @@
     <Compile Include="Assets\Scripts\Monsters\MonsterDestroyController.cs" />
     <Compile Include="Assets\Scripts\Monsters\BaseMonster\Monster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\Collectibles\Collectible.cs" />
     <Compile Include="Assets\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Scripts\GameFunction\SignalListener.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\DayNightCycle.cs" />
+    <Compile Include="Assets\Scripts\Collectibles\ICollectibleBehaviour.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\ScientistMale.cs" />
     <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -104,9 +106,11 @@
     <Compile Include="Assets\Scripts\Health\HealthController.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\InventoryManagement.cs" />
+    <Compile Include="Assets\Scripts\Scoring\ScoreUI.cs" />
     <Compile Include="Assets\Scripts\Monsters\PlayerAwarenessController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\Collectibles\HealthCollectibleBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
