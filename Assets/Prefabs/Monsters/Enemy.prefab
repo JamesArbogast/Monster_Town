@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -623465821
-  m_SortingLayer: 10
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -720778814, guid: 5d96b93e3fadc174f83b39e416267ac1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: -2298970281341110115}
   - component: {fileID: 5398847895655627205}
   - component: {fileID: 2539008936853859875}
+  - component: {fileID: 8419082716471811930}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -332,6 +333,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8419082716471811930}
+        m_TargetAssemblyTypeName: MonsterCollecttibleDrop, Assembly-CSharp
+        m_MethodName: RandomlyDropCollectible
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.9
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamaged:
     m_PersistentCalls:
       m_Calls: []
@@ -363,3 +376,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killScore: 10
+--- !u!114 &8419082716471811930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9122647631885793654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477b2d0da4a4b544f84b95c610ea0b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfCollectibleDrop: 0.3

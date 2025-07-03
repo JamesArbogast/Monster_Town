@@ -6,21 +6,23 @@ using System.Collections;
 public class InvincibilityController : MonoBehaviour
 {
     private HealthController healthController;
+    private SpriteFlash spriteFlash;
 
     private void Awake()
     {
         healthController = GetComponent<HealthController>();
+        spriteFlash = GetComponent<SpriteFlash>();
     }
 
-    public void StartInvincibility(float invincibilityDuration)
+    public void StartInvincibility(float invincibilityDuration, Color flashColor, int numberOfFlashes)
     {
-        StartCoroutine(InvincibilityCoroutine(invincibilityDuration));
+        StartCoroutine(InvincibilityCoroutine(invincibilityDuration, flashColor, numberOfFlashes));
     }
 
-    private IEnumerator InvincibilityCoroutine(float invincibilityDuration)
+    private IEnumerator InvincibilityCoroutine(float invincibilityDuration, Color flashColor, int numberOfFlashes)
     {
         healthController.isInvincible = true;
-        yield return new WaitForSeconds(invincibilityDuration);
+        yield return spriteFlash.FlashCoroutine(invincibilityDuration, flashColor, numberOfFlashes);
         healthController.isInvincible = false;
     }
 }

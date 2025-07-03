@@ -2,7 +2,7 @@ Using pre-set license
 Built from '6000.1/staging' branch; Version is '6000.1.1f1 (7197418f847b) revision 7444289'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.27881) 64bit Core' Language: 'en' Physical Memory: 8102 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
-Date: 2025-06-27T04:43:56Z
+Date: 2025-06-28T23:06:18Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.1.1f1\Editor\Unity.exe
@@ -16,7 +16,7 @@ C:/Users/james/OneDrive/Desktop/My Games/Monster_Town!
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51294
+50222
 -job-worker-count
 5
 -background-job-worker-count
@@ -62,12 +62,12 @@ C:/Users/james/OneDrive/Desktop/My Games/Monster_Town!
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11508]  Target information:
+Player connection [19832]  Target information:
 
-Player connection [11508]  * "[IP] 192.168.0.27 [Port] 0 [Flags] 2 [Guid] 475208071 [EditorId] 475208071 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-DC3VDT48) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [19832]  * "[IP] 192.168.0.27 [Port] 0 [Flags] 2 [Guid] 637771845 [EditorId] 637771845 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-DC3VDT48) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [11508] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [11508] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [19832] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [19832] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -79,7 +79,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 303.39 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 8.13 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.1.1f1 (7197418f847b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/Resources/UnitySubsystems
@@ -95,7 +95,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56776
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -103,43 +103,43 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.1f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.1f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.024039 seconds.
-- Loaded All Assemblies, in  4.368 seconds
+Registered in 0.008047 seconds.
+- Loaded All Assemblies, in  0.956 seconds
 Native extension for LinuxStandalone target not found
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.974 seconds
-Domain Reload Profiling: 5332ms
-	BeginReloadAssembly (307ms)
+- Finished resetting the current domain, in  0.662 seconds
+Domain Reload Profiling: 1613ms
+	BeginReloadAssembly (440ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (950ms)
-	RebuildNativeTypeToScriptingClass (67ms)
-	initialDomainReloadingComplete (262ms)
-	LoadAllAssembliesAndSetupDomain (2772ms)
-		LoadAssemblies (298ms)
+	RebuildCommonClasses (73ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (81ms)
+	LoadAllAssembliesAndSetupDomain (334ms)
+		LoadAssemblies (432ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (2761ms)
-			TypeCache.Refresh (2757ms)
-				TypeCache.ScanAssembly (2123ms)
+		AnalyzeDomain (329ms)
+			TypeCache.Refresh (327ms)
+				TypeCache.ScanAssembly (306ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (975ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (663ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (893ms)
+		SetupLoadedEditorAssemblies (596ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (221ms)
-			SetLoadedEditorAssemblies (9ms)
-			BeforeProcessingInitializeOnLoad (199ms)
-			ProcessInitializeOnLoadAttributes (353ms)
-			ProcessInitializeOnLoadMethodAttributes (112ms)
+			InitializePlatformSupportModulesInManaged (184ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (219ms)
+			ProcessInitializeOnLoadMethodAttributes (85ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -148,49 +148,49 @@ Domain Reload Profiling: 5332ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.490 seconds
+- Loaded All Assemblies, in  1.423 seconds
 Script 'CharacterController' has the same name as built-in Unity component.
 AddComponent and GetComponent will not work with this script.
-Refreshing native plugins compatible for Editor in 1.89 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.39 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.195 seconds
-Domain Reload Profiling: 4677ms
-	BeginReloadAssembly (342ms)
+- Finished resetting the current domain, in  1.333 seconds
+Domain Reload Profiling: 2743ms
+	BeginReloadAssembly (705ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (20ms)
+		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (76ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (3016ms)
-		LoadAssemblies (2392ms)
+		CreateAndSetChildDomain (86ms)
+	RebuildCommonClasses (70ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (553ms)
+		LoadAssemblies (867ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (792ms)
-			TypeCache.Refresh (739ms)
-				TypeCache.ScanAssembly (556ms)
-			BuildScriptInfoCaches (38ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1196ms)
+		AnalyzeDomain (220ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (142ms)
+			BuildScriptInfoCaches (39ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1334ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (951ms)
+		SetupLoadedEditorAssemblies (1101ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (30ms)
-			SetLoadedEditorAssemblies (9ms)
-			BeforeProcessingInitializeOnLoad (245ms)
-			ProcessInitializeOnLoadAttributes (585ms)
-			ProcessInitializeOnLoadMethodAttributes (64ms)
-			AfterProcessingInitializeOnLoad (17ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (232ms)
+			ProcessInitializeOnLoadAttributes (648ms)
+			ProcessInitializeOnLoadMethodAttributes (171ms)
+			AfterProcessingInitializeOnLoad (14ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
 WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -203,190 +203,60 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 2.80 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.36 seconds
+Refreshing native plugins compatible for Editor in 4.90 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2536 unused Assets / (1.3 MB). Loaded Objects now: 3107.
-Memory consumption went from 100.9 MB to 99.6 MB.
-Total: 12.903800 ms (FindLiveObjects: 0.831100 ms CreateObjectMapping: 0.391400 ms MarkObjects: 8.714900 ms  DeleteObjects: 2.963500 ms)
+Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2538 unused Assets / (1.1 MB). Loaded Objects now: 3110.
+Memory consumption went from 101.3 MB to 100.2 MB.
+Total: 9.571600 ms (FindLiveObjects: 0.504600 ms CreateObjectMapping: 0.389900 ms MarkObjects: 7.590000 ms  DeleteObjects: 1.084500 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 359274.305933 seconds.
-  path: Assets/Prefabs/Monsters/Enemy.prefab
-  artifactKey: Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Monsters/Enemy.prefab using Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bea3bf1e7ccd13b7f7a2f3c042716e4c') in 0.3477188 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 42
-
-========================================================================
-Received Prepare
-Script 'CharacterController' has the same name as built-in Unity component.
-AddComponent and GetComponent will not work with this script.
-WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 1.32 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2530 unused Assets / (0.9 MB). Loaded Objects now: 3118.
-Memory consumption went from 90.1 MB to 89.3 MB.
-Total: 28.806500 ms (FindLiveObjects: 0.573500 ms CreateObjectMapping: 0.345800 ms MarkObjects: 26.640900 ms  DeleteObjects: 1.244400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.071 seconds
+- Loaded All Assemblies, in  3.134 seconds
 Script 'CharacterController' has the same name as built-in Unity component.
 AddComponent and GetComponent will not work with this script.
-Refreshing native plugins compatible for Editor in 1.16 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.21 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.761 seconds
-Domain Reload Profiling: 1825ms
-	BeginReloadAssembly (409ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (78ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (538ms)
-		LoadAssemblies (669ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (132ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (109ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (762ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (610ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (139ms)
-			ProcessInitializeOnLoadAttributes (391ms)
-			ProcessInitializeOnLoadMethodAttributes (42ms)
-			AfterProcessingInitializeOnLoad (11ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2535 unused Assets / (1.2 MB). Loaded Objects now: 3117.
-Memory consumption went from 90.7 MB to 89.6 MB.
-Total: 7.458700 ms (FindLiveObjects: 0.479500 ms CreateObjectMapping: 0.421900 ms MarkObjects: 5.191700 ms  DeleteObjects: 1.364200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 297.120038 seconds.
-  path: Assets/Prefabs/Monsters/Enemy.prefab
-  artifactKey: Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Monsters/Enemy.prefab using Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6fe1f9750f51a8d7ea30256c8f458c96') in 0.113717 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
-
-========================================================================
-Received Prepare
-Script 'CharacterController' has the same name as built-in Unity component.
-AddComponent and GetComponent will not work with this script.
-WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2530 unused Assets / (1.1 MB). Loaded Objects now: 3118.
-Memory consumption went from 91.1 MB to 90.0 MB.
-Total: 11.546200 ms (FindLiveObjects: 0.477700 ms CreateObjectMapping: 0.355400 ms MarkObjects: 9.425600 ms  DeleteObjects: 1.286100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.951 seconds
-Script 'CharacterController' has the same name as built-in Unity component.
-AddComponent and GetComponent will not work with this script.
-Refreshing native plugins compatible for Editor in 1.75 ms, found 2 plugins.
-Native extension for LinuxStandalone target not found
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.922 seconds
-Domain Reload Profiling: 1865ms
-	BeginReloadAssembly (321ms)
+- Finished resetting the current domain, in  0.834 seconds
+Domain Reload Profiling: 3962ms
+	BeginReloadAssembly (266ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (59ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (496ms)
-		LoadAssemblies (562ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (64ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (2741ms)
+		LoadAssemblies (2765ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (131ms)
-			TypeCache.Refresh (14ms)
+		AnalyzeDomain (124ms)
+			TypeCache.Refresh (12ms)
 				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (104ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (922ms)
+			BuildScriptInfoCaches (101ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (834ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (755ms)
+		SetupLoadedEditorAssemblies (676ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (20ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (163ms)
-			ProcessInitializeOnLoadAttributes (507ms)
-			ProcessInitializeOnLoadMethodAttributes (46ms)
-			AfterProcessingInitializeOnLoad (13ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (159ms)
+			ProcessInitializeOnLoadAttributes (429ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+			AfterProcessingInitializeOnLoad (12ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
 WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -399,12 +269,12 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 1.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.93 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2535 unused Assets / (1.1 MB). Loaded Objects now: 3117.
-Memory consumption went from 90.7 MB to 89.6 MB.
-Total: 7.264200 ms (FindLiveObjects: 0.462000 ms CreateObjectMapping: 0.373800 ms MarkObjects: 5.117600 ms  DeleteObjects: 1.309600 ms)
+Unloading 2536 unused Assets / (1.0 MB). Loaded Objects now: 3110.
+Memory consumption went from 90.1 MB to 89.1 MB.
+Total: 10.762200 ms (FindLiveObjects: 0.759800 ms CreateObjectMapping: 0.743900 ms MarkObjects: 7.398400 ms  DeleteObjects: 1.858300 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
@@ -423,18 +293,18 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 1.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2530 unused Assets / (1.0 MB). Loaded Objects now: 3117.
-Memory consumption went from 90.9 MB to 89.9 MB.
-Total: 9.736600 ms (FindLiveObjects: 0.467800 ms CreateObjectMapping: 0.446600 ms MarkObjects: 6.943600 ms  DeleteObjects: 1.876800 ms)
+Unloading 2531 unused Assets / (0.9 MB). Loaded Objects now: 3110.
+Memory consumption went from 90.3 MB to 89.4 MB.
+Total: 7.272800 ms (FindLiveObjects: 0.416600 ms CreateObjectMapping: 0.261100 ms MarkObjects: 5.648900 ms  DeleteObjects: 0.945100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.967 seconds
+- Loaded All Assemblies, in  0.853 seconds
 Script 'CharacterController' has the same name as built-in Unity component.
 AddComponent and GetComponent will not work with this script.
 Refreshing native plugins compatible for Editor in 1.13 ms, found 2 plugins.
@@ -444,39 +314,39 @@ Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.760 seconds
-Domain Reload Profiling: 1720ms
-	BeginReloadAssembly (441ms)
+- Finished resetting the current domain, in  0.796 seconds
+Domain Reload Profiling: 1643ms
+	BeginReloadAssembly (244ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (54ms)
-	RebuildCommonClasses (77ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (388ms)
-		LoadAssemblies (593ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (74ms)
+	LoadAllAssembliesAndSetupDomain (461ms)
+		LoadAssemblies (426ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (123ms)
-			TypeCache.Refresh (10ms)
+		AnalyzeDomain (171ms)
+			TypeCache.Refresh (14ms)
 				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (104ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (761ms)
+			BuildScriptInfoCaches (143ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (796ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (616ms)
+		SetupLoadedEditorAssemblies (643ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (142ms)
-			ProcessInitializeOnLoadAttributes (402ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (149ms)
+			ProcessInitializeOnLoadAttributes (411ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (15ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
 WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -489,81 +359,81 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 1.47 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.28 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2535 unused Assets / (1.1 MB). Loaded Objects now: 3117.
-Memory consumption went from 90.7 MB to 89.7 MB.
-Total: 9.254200 ms (FindLiveObjects: 0.525100 ms CreateObjectMapping: 0.546900 ms MarkObjects: 6.093300 ms  DeleteObjects: 2.087300 ms)
+Unloading 2536 unused Assets / (1.1 MB). Loaded Objects now: 3110.
+Memory consumption went from 90.1 MB to 89.1 MB.
+Total: 8.756100 ms (FindLiveObjects: 0.464200 ms CreateObjectMapping: 0.369000 ms MarkObjects: 6.826900 ms  DeleteObjects: 1.094400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Import Request.
-  Time since last request: 141.212489 seconds.
-  path: Assets/Prefabs/Monsters/Enemy.prefab
-  artifactKey: Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Monsters/Enemy.prefab using Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '70eceda7671c933786373e0e1d546919') in 0.1087665 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
+Received Prepare
+Script 'CharacterController' has the same name as built-in Unity component.
+AddComponent and GetComponent will not work with this script.
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 1.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2531 unused Assets / (0.9 MB). Loaded Objects now: 3110.
+Memory consumption went from 90.3 MB to 89.4 MB.
+Total: 10.494400 ms (FindLiveObjects: 0.633300 ms CreateObjectMapping: 0.694400 ms MarkObjects: 7.944900 ms  DeleteObjects: 1.219900 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 5.625624 seconds.
-  path: Assets/Prefabs/Monsters/Enemy.prefab
-  artifactKey: Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Monsters/Enemy.prefab using Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a252de7c04f3ab709b9bc8e590f706fb') in 0.012978 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
-
-========================================================================
-Received Import Request.
-  Time since last request: 171.345972 seconds.
-  path: Assets/Prefabs/Monsters/Enemy.prefab
-  artifactKey: Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Monsters/Enemy.prefab using Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7d09ebf6b6e24ec7f0b3f011329206ca') in 0.0159743 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
-
+Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.922 seconds
+- Loaded All Assemblies, in  0.813 seconds
 Script 'CharacterController' has the same name as built-in Unity component.
 AddComponent and GetComponent will not work with this script.
-Refreshing native plugins compatible for Editor in 1.25 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.12 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.882 seconds
-Domain Reload Profiling: 1797ms
-	BeginReloadAssembly (267ms)
+- Finished resetting the current domain, in  0.860 seconds
+Domain Reload Profiling: 1668ms
+	BeginReloadAssembly (260ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (56ms)
-	RebuildCommonClasses (141ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (438ms)
-		LoadAssemblies (457ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (425ms)
+		LoadAssemblies (438ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (130ms)
-			TypeCache.Refresh (12ms)
+		AnalyzeDomain (137ms)
+			TypeCache.Refresh (10ms)
 				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (107ms)
+			BuildScriptInfoCaches (115ms)
 			ResolveRequiredComponents (7ms)
-	FinalizeReload (882ms)
+	FinalizeReload (861ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (706ms)
+		SetupLoadedEditorAssemblies (698ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (21ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (155ms)
-			ProcessInitializeOnLoadAttributes (470ms)
-			ProcessInitializeOnLoadMethodAttributes (43ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (440ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (12ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (14ms)
@@ -579,67 +449,511 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 1.42 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2536 unused Assets / (1.2 MB). Loaded Objects now: 3117.
-Memory consumption went from 90.9 MB to 89.7 MB.
-Total: 12.240700 ms (FindLiveObjects: 0.498200 ms CreateObjectMapping: 0.425600 ms MarkObjects: 9.670300 ms  DeleteObjects: 1.645000 ms)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2536 unused Assets / (1.0 MB). Loaded Objects now: 3110.
+Memory consumption went from 90.1 MB to 89.1 MB.
+Total: 8.799100 ms (FindLiveObjects: 0.355800 ms CreateObjectMapping: 0.283800 ms MarkObjects: 6.846300 ms  DeleteObjects: 1.311500 ms)
 
-Prepare: number of updated asset objects reloaded= 13
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.808 seconds
+Script 'CharacterController' has the same name as built-in Unity component.
+AddComponent and GetComponent will not work with this script.
+Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.819 seconds
+Domain Reload Profiling: 1621ms
+	BeginReloadAssembly (275ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (61ms)
+	RebuildCommonClasses (70ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (395ms)
+		LoadAssemblies (427ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (127ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (111ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (819ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (661ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (160ms)
+			ProcessInitializeOnLoadAttributes (419ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (15ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 1.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2536 unused Assets / (1.0 MB). Loaded Objects now: 3110.
+Memory consumption went from 90.1 MB to 89.1 MB.
+Total: 8.364800 ms (FindLiveObjects: 0.621800 ms CreateObjectMapping: 0.563000 ms MarkObjects: 5.993000 ms  DeleteObjects: 1.184800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 188.068601 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
-  artifactKey: Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset using Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '29cf15459077969bcf0d67a8e10224d3') in 0.2396074 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  Time since last request: 1256.519325 seconds.
+  path: Assets/Prefabs/Monsters/Enemy.prefab
+  artifactKey: Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Monsters/Enemy.prefab using Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '990a851b12f6ae4f2d611ee226c67cd3') in 1.3860929 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
-  artifactKey: Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset using Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8761399ca3376163c0ce8bc850fc6cfc') in 0.0527918 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  Time since last request: 34.117924 seconds.
+  path: Assets/Prefabs/Monsters/Enemy.prefab
+  artifactKey: Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Monsters/Enemy.prefab using Guid(55499b2253d68fe419c81118ea97d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9625c55906cb2182ec026c0807dc8e03') in 0.0140387 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 42
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.237 seconds
+Script 'CharacterController' has the same name as built-in Unity component.
+AddComponent and GetComponent will not work with this script.
+Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.236 seconds
+Domain Reload Profiling: 2467ms
+	BeginReloadAssembly (493ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (71ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (190ms)
+	RebuildCommonClasses (93ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (578ms)
+		LoadAssemblies (567ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (154ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1237ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1083ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (79ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (285ms)
+			ProcessInitializeOnLoadAttributes (629ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 85.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2536 unused Assets / (0.6 MB). Loaded Objects now: 3119.
+Memory consumption went from 90.8 MB to 90.2 MB.
+Total: 31.797600 ms (FindLiveObjects: 0.775300 ms CreateObjectMapping: 0.755100 ms MarkObjects: 12.582800 ms  DeleteObjects: 17.680200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.043 seconds
+Script 'CharacterController' has the same name as built-in Unity component.
+AddComponent and GetComponent will not work with this script.
+Refreshing native plugins compatible for Editor in 1.54 ms, found 2 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.876 seconds
+Domain Reload Profiling: 1913ms
+	BeginReloadAssembly (432ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (19ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (177ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (482ms)
+		LoadAssemblies (488ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (145ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (128ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (876ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (715ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (151ms)
+			ProcessInitializeOnLoadAttributes (457ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 1.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2536 unused Assets / (0.9 MB). Loaded Objects now: 3119.
+Memory consumption went from 90.8 MB to 89.9 MB.
+Total: 10.223300 ms (FindLiveObjects: 0.447800 ms CreateObjectMapping: 0.435700 ms MarkObjects: 8.053000 ms  DeleteObjects: 1.285500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.783 seconds
+Script 'CharacterController' has the same name as built-in Unity component.
+AddComponent and GetComponent will not work with this script.
+Refreshing native plugins compatible for Editor in 1.84 ms, found 2 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.212 seconds
+Domain Reload Profiling: 1989ms
+	BeginReloadAssembly (260ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (410ms)
+		LoadAssemblies (438ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (123ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (107ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1213ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (978ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (34ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (221ms)
+			ProcessInitializeOnLoadAttributes (627ms)
+			ProcessInitializeOnLoadMethodAttributes (70ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 1.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2536 unused Assets / (1.0 MB). Loaded Objects now: 3119.
+Memory consumption went from 90.8 MB to 89.8 MB.
+Total: 9.572300 ms (FindLiveObjects: 0.455200 ms CreateObjectMapping: 0.347300 ms MarkObjects: 7.526600 ms  DeleteObjects: 1.241400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 551.029837 seconds.
+  path: Packages/com.unity.2d.sprite/package.json
+  artifactKey: Guid(7dc5f1e5d04ac8549ac21802071e983b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/package.json using Guid(7dc5f1e5d04ac8549ac21802071e983b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca75a4d15c7ca2a9ea84e54d9ed1b443') in 0.2862121 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
-  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '369f02d17232010c1885d91ee1df1781') in 0.0321909 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  Time since last request: 22.575312 seconds.
+  path: Assets/Art/2D_sci-fi_weapon
+  artifactKey: Guid(8074346c4e15ab842a9f8d900f3848ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon using Guid(8074346c4e15ab842a9f8d900f3848ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2730e014a30b5aba7b4f79f6f2c18e4c') in 0.0006073 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.545186 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Atlases
+  artifactKey: Guid(74d4a025598c1e741bb6eba03b10bcc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Atlases using Guid(74d4a025598c1e741bb6eba03b10bcc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61e26bf576375e30dafcac35b4b76e4a') in 0.0005556 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.380260 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Atlases/PNG
+  artifactKey: Guid(33a1355608721d34d88cc421d0aea48f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Atlases/PNG using Guid(33a1355608721d34d88cc421d0aea48f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2ed9bb06780430004181886a9d788b31') in 0.0008148 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.152866 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_blue.png
+  artifactKey: Guid(2262f408278271248889a3ea3c7e75bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_blue.png using Guid(2262f408278271248889a3ea3c7e75bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd75ce0e0bba7498943fe1070447f2f0c') in 1.161676 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_orange.png
+  artifactKey: Guid(3ad56d0daa98d8a41b2846a87a936e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_orange.png using Guid(3ad56d0daa98d8a41b2846a87a936e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c7e9777e2a3b0d1c65d10f6a3ff54c72') in 0.1139724 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_red.png
+  artifactKey: Guid(eeac123894a68534590c3197728fced1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_red.png using Guid(eeac123894a68534590c3197728fced1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f8cc98c08067cc2e49b588d286b32514') in 0.0566536 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_purple.png
+  artifactKey: Guid(393021b790fe7bd4484e9f84c76ad03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Atlases/PNG/Atlas_purple.png using Guid(393021b790fe7bd4484e9f84c76ad03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '593246e4f8afc59e67bec82521de7ae3') in 0.0496045 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.214368 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites
+  artifactKey: Guid(826a83d9696c85d4d86da14bb601dfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites using Guid(826a83d9696c85d4d86da14bb601dfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '851d52d8e8a73251d05f69fe96b1dac2') in 0.0005756 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.165399 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue
+  artifactKey: Guid(286007650709a504a8ce395658247e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue using Guid(286007650709a504a8ce395658247e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7a37aa67cb78db302ee8ecf7485a2058') in 0.0006145 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052170 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/ammo_blue.png
+  artifactKey: Guid(133efc8b88eda0f4ca9914b312de2520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/ammo_blue.png using Guid(133efc8b88eda0f4ca9914b312de2520) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '728c5877591ce025c61dea4004d166da') in 0.0207791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/blaster_blue.png
+  artifactKey: Guid(5b7ba0d9d2234364a96c9db530596d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/blaster_blue.png using Guid(5b7ba0d9d2234364a96c9db530596d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '89a1e76170febe018a31e024c45f7248') in 0.0164554 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/grenade_blue.png
+  artifactKey: Guid(38332853b7d949c429a8fb4d9b928603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/grenade_blue.png using Guid(38332853b7d949c429a8fb4d9b928603) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '45e0205099f72fdac90e80e866c02910') in 0.0166013 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/TextMesh Pro/Fonts/VladtepesiiVladsDad.asset
-  artifactKey: Guid(7f275f563969e3c468c9ce77aea98b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Fonts/VladtepesiiVladsDad.asset using Guid(7f275f563969e3c468c9ce77aea98b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '29264d953295aad83663583a290bf6fa') in 0.109246 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/kit_blue.png
+  artifactKey: Guid(4703fced59df4ef4da0dd8f4331048f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/kit_blue.png using Guid(4703fced59df4ef4da0dd8f4331048f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '329d7b6673ec1d46d9c07a3fe4f39af1') in 0.0184874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset
-  artifactKey: Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset using Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a4a92c35ebd8737de3343579e640cb20') in 0.0253275 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/gun_blue.png
+  artifactKey: Guid(3e652a597824bd44d91fd93f87e3857d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/gun_blue.png using Guid(3e652a597824bd44d91fd93f87e3857d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef9bbc0599bd78112c03f5b5128413d4') in 0.0242022 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Oswald Bold SDF.asset
-  artifactKey: Guid(0161d805a3764c089bef00bfe00793f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Oswald Bold SDF.asset using Guid(0161d805a3764c089bef00bfe00793f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8bf093ac67895fa80c5faf76198141a3') in 0.0280395 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  Time since last request: 0.025982 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/knife_blue.png
+  artifactKey: Guid(b2c623fb2b729d14fb3f5e55bbfcb35a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/knife_blue.png using Guid(b2c623fb2b729d14fb3f5e55bbfcb35a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1ef3646fc9242a9e7b7b277b43605fda') in 0.0198213 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029302 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/machine_gun_blue.png
+  artifactKey: Guid(42d0e32d6fbccf3438cb33286fb41e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/machine_gun_blue.png using Guid(42d0e32d6fbccf3438cb33286fb41e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b584987cae1fb040bd62b0310d24d2fe') in 0.0175202 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037041 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/med_blue.png
+  artifactKey: Guid(5482971d57314b94087e863e528a5f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/med_blue.png using Guid(5482971d57314b94087e863e528a5f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b2fc16e27f917b6289cfaed4c36e98ad') in 0.0172066 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026298 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/blue/rocket _launcher_blue.png
+  artifactKey: Guid(837bde0e349efa24fa4fd77808011006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/blue/rocket _launcher_blue.png using Guid(837bde0e349efa24fa4fd77808011006) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc8288db1c31738f28faae76a40f34ff') in 0.0220543 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.698482 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green
+  artifactKey: Guid(23341392b9703954c906f483ddbae602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green using Guid(23341392b9703954c906f483ddbae602) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '300904bf20e1cdd48815dde8255e94fd') in 0.0005965 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.105439 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green/ammo_green.png
+  artifactKey: Guid(434993171fa91504c8c0197f21477c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green/ammo_green.png using Guid(434993171fa91504c8c0197f21477c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fb35c54765ea3e14d6c454e666c6cdc2') in 0.0636561 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green/flamethrower_green.png
+  artifactKey: Guid(dffc1d6b89f15ca49b76f9d27ec8d79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green/flamethrower_green.png using Guid(dffc1d6b89f15ca49b76f9d27ec8d79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e29e592927733d0ebd7ce40c1d6d7ccc') in 0.0188114 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000026 seconds.
-  path: Assets/TextMesh Pro/Fonts/BurnTheWitch.asset
-  artifactKey: Guid(f4e70ecf22b345d478c3e1e5e9ad54c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Fonts/BurnTheWitch.asset using Guid(f4e70ecf22b345d478c3e1e5e9ad54c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b15c958ae4a81516eac321f94a1cf05d') in 0.1446348 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green/laser_green.png
+  artifactKey: Guid(09706c49e2557b343ba2a56efef6e9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green/laser_green.png using Guid(09706c49e2557b343ba2a56efef6e9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '27280161b3bc999896d3f689f319abda') in 0.0620737 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green/missile_green.png
+  artifactKey: Guid(c11241572f1a3444f956e4d29d23b3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green/missile_green.png using Guid(c11241572f1a3444f956e4d29d23b3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd5558e64fc7c0bc2c4e6514d33a825a8') in 0.0350284 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green/machine_gun_green.png
+  artifactKey: Guid(3e3b0924f7cd2cf4c8e1205e3e2f9044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green/machine_gun_green.png using Guid(3e3b0924f7cd2cf4c8e1205e3e2f9044) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91dbc9de0af8b16de586bbdfeca4bd34') in 0.0165834 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green/grenade_green.png
+  artifactKey: Guid(0f37d4f7ed59bbf45abe67ab342e3acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green/grenade_green.png using Guid(0f37d4f7ed59bbf45abe67ab342e3acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b78a14dbd3f4f1e187816e3d012ff248') in 0.0203177 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Art/2D_sci-fi_weapon/Sprites/green/blaster_green.png
+  artifactKey: Guid(1e2c9ea409eeccf4dbadbcb990d24473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/2D_sci-fi_weapon/Sprites/green/blaster_green.png using Guid(1e2c9ea409eeccf4dbadbcb990d24473) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '57537d2526693687bd48dcaad8d81c7b') in 0.0459831 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

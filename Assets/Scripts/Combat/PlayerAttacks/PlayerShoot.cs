@@ -35,8 +35,6 @@ public class PlayerShoot : MonoBehaviour
                 lastFireTime = Time.time;
                 fireSingle = false;
             }
-
-
         }
     }
 
@@ -54,7 +52,6 @@ public class PlayerShoot : MonoBehaviour
     {
         GameObject projectile = Instantiate(projectilePrefab, gunOffset.position, transform.rotation);
         Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
-
-        rigidBody.linearVelocity = projectileSpeed * transform.up;
+        rigidBody.linearVelocity = projectileSpeed * gameObject.GetComponent<Rigidbody2D>().linearVelocity;
     }
 }
