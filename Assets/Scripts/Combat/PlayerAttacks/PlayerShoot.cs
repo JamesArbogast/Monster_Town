@@ -51,7 +51,12 @@ public class PlayerShoot : MonoBehaviour
     private void FireProjectile()
     {
         GameObject projectile = Instantiate(projectilePrefab, gunOffset.position, transform.rotation);
+        Projectiles firedProjectile = projectile.GetComponent<Projectiles>();
+        float rot = Mathf.Atan2(firedProjectile.rotation.y, firedProjectile.rotation.x) * Mathf.Rad2Deg;
+        Debug.Log(firedProjectile.direction.x + firedProjectile.direction.y);
         Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
-        rigidBody.linearVelocity = projectileSpeed * gameObject.GetComponent<Rigidbody2D>().linearVelocity;
+        rigidBody.linearVelocity = new Vector2(firedProjectile.direction.x, firedProjectile.direction.y).normalized * projectileSpeed;
+        Debug.Log(rigidBody.linearVelocity);
+        firedProjectile.transform.rotation = Quaternion.Euler(0, 0, rot+90);
     }
 }

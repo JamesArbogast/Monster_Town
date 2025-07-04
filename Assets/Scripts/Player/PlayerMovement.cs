@@ -163,7 +163,6 @@ public class PlayerMovement : BasePlayer
     {
         Vector2 temp = new Vector2(anim.GetFloat("Horizontal"),anim.GetFloat("Vertical"));
         Projectiles arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Projectiles>();
-        arrow.SetUp(temp, ChooseArrowDirection());
         return arrow;
     }
 

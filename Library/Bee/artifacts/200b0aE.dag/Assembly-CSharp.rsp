@@ -453,6 +453,7 @@
 "Assets/Scripts/Monsters/MonsterSpawner.cs"
 "Assets/Scripts/Monsters/PlayerAwarenessController.cs"
 "Assets/Scripts/Player/EnergyManager.cs"
+"Assets/Scripts/Player/PlayerAim.cs"
 "Assets/Scripts/Player/PlayerAnimator.cs"
 "Assets/Scripts/Player/PlayerDamagedInvincibility.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"

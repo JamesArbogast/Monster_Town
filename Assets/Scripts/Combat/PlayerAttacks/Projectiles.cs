@@ -5,23 +5,28 @@ using UnityEngine;
 public class Projectiles : MonoBehaviour
 {
     public float speed;
+    public Vector3 direction;
+    public Vector3 rotation;
     public Rigidbody2D myRb;
     private Camera _camera;
+    private Vector3 mousePos;
+
     // Start is called before the first frame update
     private void Awake()
     {
         _camera = Camera.main;
+        mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
+        direction = mousePos - transform.position;
+        rotation = transform.position - mousePos;
+    }
+
+    private void Start()
+    {
     }
 
     private void Update()
     {
         DestroyWhenOffScreen();
-    }
-
-    public void SetUp(Vector2 velocity, Vector3 direction)
-    {
-        myRb.linearVelocity = velocity.normalized * speed;
-        transform.rotation = Quaternion.Euler(direction);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

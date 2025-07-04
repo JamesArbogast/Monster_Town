@@ -89,9 +89,9 @@
     <Compile Include="Assets\Scripts\Collectibles\Collectible.cs" />
     <Compile Include="Assets\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\Scripts\SpriteScripts\SpriteFlash.cs" />
     <Compile Include="Assets\Scripts\GameFunction\SignalListener.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\Scripts\SpriteScripts\SpriteFlash.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\DayNightCycle.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\ScientistMale.cs" />
@@ -116,6 +116,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\Collectibles\iCollectibleBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAim.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerDamagedInvincibility.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Sign.cs" />
