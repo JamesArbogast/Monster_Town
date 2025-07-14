@@ -8,7 +8,7 @@ public class Projectiles : MonoBehaviour
     public Vector3 direction;
     public Vector3 rotation;
     public Rigidbody2D myRb;
-    private Camera _camera;
+    public Camera _camera;
     private Vector3 mousePos;
 
     // Start is called before the first frame update
