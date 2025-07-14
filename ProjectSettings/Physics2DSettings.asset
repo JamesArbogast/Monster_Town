@@ -4,27 +4,39 @@
 Physics2DSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_Gravity: {x: 0, y: -9.81}
-  m_DefaultMaterial: {fileID: 0}
-  m_VelocityIterations: 8
-  m_PositionIterations: 3
-  m_VelocityThreshold: 1
-  m_MaxLinearCorrection: 0.2
-  m_MaxAngularCorrection: 8
-  m_MaxTranslationSpeed: 100
-  m_MaxRotationSpeed: 360
-  m_BaumgarteScale: 0.2
-  m_BaumgarteTimeOfImpactScale: 0.75
-  m_TimeToSleep: 0.5
-  m_LinearSleepTolerance: 0.01
-  m_AngularSleepTolerance: 2
-  m_DefaultContactOffset: 0.01
+
+  # --- Physics World ---
+  m_Gravity: {x: 0, y: -9.81}           # Standard gravity, tune as needed (e.g., for platformers)
+  m_DefaultMaterial: {fileID: 0}         # Reference your custom Physics2DMaterial for default friction/bounce
+
+  # --- Solver Settings ---
+  m_VelocityIterations: 12               # Increased for improved simulation stability at high velocities
+  m_PositionIterations: 6                # Improved position correction, reduces jitter on stacked bodies
+  m_VelocityThreshold: 0.5               # Lower for more responsive collisions at low speeds
+  m_MaxLinearCorrection: 0.4             # Allow greater correction before snapping, prevents sticking
+  m_MaxAngularCorrection: 12             # Helps with spinning objects, especially if you use rotating platforms
+  m_MaxTranslationSpeed: 150             # Supports fast-moving bodies, prevents tunneling
+  m_MaxRotationSpeed: 720                # Increased for fast-rotating sprites (tweak for your needs)
+
+  # --- Baumgarte Stabilization ---
+  m_BaumgarteScale: 0.2                  # Standard, tweak for penetration correction stability
+  m_BaumgarteTimeOfImpactScale: 0.75     # For continuous collision resolution
+
+  # --- Sleep Settings (Performance) ---
+  m_TimeToSleep: 0.5                     # Time before inactive bodies sleep
+  m_LinearSleepTolerance: 0.005          # Lower = more sensitive to motion, prevents false sleep
+  m_AngularSleepTolerance: 1             # Lower for more stable stacks, higher for performance
+
+  # --- Contact Settings ---
+  m_DefaultContactOffset: 0.01           # Standard; lower to improve contact precision, higher to save performance
+
+  # --- Multithreading & Job System ---
   m_JobOptions:
     serializedVersion: 2
-    useMultithreading: 0
-    useConsistencySorting: 0
+    useMultithreading: 1                 # Enable for multi-core CPUs, big performance boost
+    useConsistencySorting: 1             # Improved determinism in collisions (esp. for multiplayer/networked)
     m_InterpolationPosesPerJob: 100
-    m_NewContactsPerJob: 30
+    m_NewContactsPerJob: 50
     m_CollideContactsPerJob: 100
     m_ClearFlagsPerJob: 200
     m_ClearBodyForcesPerJob: 200
@@ -38,19 +50,27 @@ Physics2DSettings:
     m_IslandSolverJointCostScale: 10
     m_IslandSolverBodiesPerJob: 50
     m_IslandSolverContactsPerJob: 50
-  m_SimulationMode: 0
-  m_QueriesHitTriggers: 1
-  m_QueriesStartInColliders: 1
-  m_CallbacksOnDisable: 1
-  m_ReuseCollisionCallbacks: 0
-  m_AutoSyncTransforms: 0
-  m_AlwaysShowColliders: 0
-  m_ShowColliderSleep: 1
-  m_ShowColliderContacts: 0
-  m_ShowColliderAABB: 0
-  m_ContactArrowScale: 0.2
-  m_ColliderAwakeColor: {r: 0.5686275, g: 0.95686275, b: 0.54509807, a: 0.7529412}
-  m_ColliderAsleepColor: {r: 0.5686275, g: 0.95686275, b: 0.54509807, a: 0.36078432}
-  m_ColliderContactColor: {r: 1, g: 0, b: 1, a: 0.6862745}
-  m_ColliderAABBColor: {r: 1, g: 1, b: 0, a: 0.2509804}
+
+  # --- Simulation Mode ---
+  m_SimulationMode: 0                    # 0 = FixedUpdate, 1 = Update, 2 = ScriptControlled
+
+  # --- Query Options ---
+  m_QueriesHitTriggers: 1                # Enable raycasts hitting triggers (good for triggers-based gameplay)
+  m_QueriesStartInColliders: 1           # Raycasts starting inside colliders hit the collider
+  m_CallbacksOnDisable: 1                # Callbacks fire when collider disabled
+  m_ReuseCollisionCallbacks: 1           # Reuse for performance (set to 0 if you have custom needs)
+  m_AutoSyncTransforms: 0                # Set to 1 if you move transforms outside physics update
+  m_AlwaysShowColliders: 0               # Editor visualization toggle
+  m_ShowColliderSleep: 1                 # Editor: visualize sleeping bodies
+  m_ShowColliderContacts: 0              # Editor: visualize contacts
+  m_ShowColliderAABB: 0                  # Editor: visualize bounding boxes
+  m_ContactArrowScale: 0.2               # Editor: contact visualization scale
+
+  # --- Editor Colors (Tweak for visual clarity) ---
+  m_ColliderAwakeColor: {r: 0.57, g: 0.96, b: 0.55, a: 0.75}
+  m_ColliderAsleepColor: {r: 0.57, g: 0.96, b: 0.55, a: 0.36}
+  m_ColliderContactColor: {r: 1, g: 0, b: 1, a: 0.69}
+  m_ColliderAABBColor: {r: 1, g: 1, b: 0, a: 0.25}
+
+  # --- Layer Collision Matrix (Leave as is, edit via Editor if needed) ---
   m_LayerCollisionMatrix: fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffafffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
