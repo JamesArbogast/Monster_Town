@@ -22,6 +22,7 @@ public class CharacterController : BasePlayer
     public Vector2 lastMove;
     private bool playerIdle;
     private bool playerMoving;
+    public GameObject testPlayer;
 
     [SerializeField]
     private Camera _camera;
@@ -123,18 +124,21 @@ public class CharacterController : BasePlayer
 
     private void PreventPlayerMoveOffScreen()
     {
-        Vector2 screenPos = _camera.WorldToScreenPoint(transform.position);
-        //Debug.Log(screenPos.x + ", " + screenPos.y);
-        if ((screenPos.x < screenBorder && rgdbdy2D.linearVelocity.x < 0) ||
-            (screenPos.x > _camera.pixelWidth - screenBorder && rgdbdy2D.linearVelocity.x > 0))
-        {
-            rgdbdy2D.linearVelocity = new Vector2(0, rgdbdy2D.linearVelocity.y);
-        }
+        if(name != "TestPlayer")
+        { 
+            Vector2 screenPos = _camera.WorldToScreenPoint(transform.position);
+            //Debug.Log(screenPos.x + ", " + screenPos.y);
+            if ((screenPos.x < screenBorder && rgdbdy2D.linearVelocity.x < 0) ||
+                (screenPos.x > _camera.pixelWidth - screenBorder && rgdbdy2D.linearVelocity.x > 0))
+            {
+                rgdbdy2D.linearVelocity = new Vector2(0, rgdbdy2D.linearVelocity.y);
+            }
 
-        if ((screenPos.y < screenBorder && rgdbdy2D.linearVelocity.y < 0) ||
-            (screenPos.y > _camera.pixelHeight - screenBorder && rgdbdy2D.linearVelocity.y > 0))
-        {
-            rgdbdy2D.linearVelocity = new Vector2(rgdbdy2D.linearVelocity.x, 0);
+            if ((screenPos.y < screenBorder && rgdbdy2D.linearVelocity.y < 0) ||
+                (screenPos.y > _camera.pixelHeight - screenBorder && rgdbdy2D.linearVelocity.y > 0))
+            {
+                rgdbdy2D.linearVelocity = new Vector2(rgdbdy2D.linearVelocity.x, 0);
+            }
         }
     }
 
