@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\Health\HealthController.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\InventoryManagement.cs" />
+    <Compile Include="Assets\Scripts\NPCScripts\NPC_Patrol.cs" />
     <Compile Include="Assets\Scripts\Scoring\ScoreUI.cs" />
     <Compile Include="Assets\Scripts\Monsters\PlayerAwarenessController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
