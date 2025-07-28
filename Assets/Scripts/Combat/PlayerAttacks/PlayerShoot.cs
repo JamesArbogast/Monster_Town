@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField]
     private float timeBetweenShots;
+
+    [SerializeField]
+    private Slider accuracySlider;
+
+    private float accuracySliderMin;
+    private float accuracySliderMax;
 
     private bool fireContinuously;
     private bool fireSingle;
@@ -58,5 +65,10 @@ public class PlayerShoot : MonoBehaviour
         rigidBody.linearVelocity = new Vector2(firedProjectile.direction.x, firedProjectile.direction.y).normalized * projectileSpeed;
         Debug.Log(rigidBody.linearVelocity);
         firedProjectile.transform.rotation = Quaternion.Euler(0, 0, rot+90);
+    }
+
+    private void StartAccuracySliderTimer()
+    {
+
     }
 }
