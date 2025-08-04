@@ -63,8 +63,8 @@ public class CharacterController : BasePlayer
         anim.SetBool("PlayerMoving", isMoving);
         anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
         anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
-        anim.SetFloat("LastMoveX", lastMove.x);
-        anim.SetFloat("LastMoveY", lastMove.y);
+        //anim.SetFloat("LastMoveX", lastMove.x);
+        //anim.SetFloat("LastMoveY", lastMove.y);
     }
 
     private void FixedUpdate()
