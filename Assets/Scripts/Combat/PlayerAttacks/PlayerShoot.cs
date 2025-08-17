@@ -24,10 +24,11 @@ public class PlayerShoot : MonoBehaviour
     //Shot UI
     [SerializeField]
     private Image shotBarFillImage;
-    private Color[] colors;
+    public Color[] colors;
     private int currentColorIndex = 0;
     private int targetColorIndex = 1;
-    private float colorTransitionTime;
+    private float targetPoint;
+    public float colorTransitionTime;
 
     //Shot accuracy and power
     [SerializeField]
@@ -82,11 +83,11 @@ public class PlayerShoot : MonoBehaviour
 
     private void ColorTransition()
     {
-        colorTransitionTime += Time.deltaTime;
-        shotBarFillImage.color = Color.Lerp(colors[currentColorIndex], colors[targetColorIndex], colorTransitionTime);
-        if(colorTransitionTime >= 1f)
+        targetPoint += Time.deltaTime/colorTransitionTime;
+        shotBarFillImage.color = Color.Lerp(colors[currentColorIndex], colors[targetColorIndex], targetPoint);
+        if(targetPoint >= 1f)
         {
-            colorTransitionTime = 0f;
+            targetPoint = 0f;
             currentColorIndex = targetColorIndex;
             targetColorIndex++;
             if (targetColorIndex == colors.Length)
@@ -161,6 +162,7 @@ public class PlayerShoot : MonoBehaviour
 
         while (elapsedTime < shotSliderTime && beginFiring)
         {
+            ColorTransition();
             elapsedTime += Time.deltaTime;
             float currentFillAmount = Mathf.Lerp(startFillAmount, targetFillAmount, elapsedTime / shotSliderTime);
             shotBarFillImage.fillAmount = currentFillAmount;
