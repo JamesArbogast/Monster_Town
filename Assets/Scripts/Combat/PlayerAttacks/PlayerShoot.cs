@@ -24,11 +24,15 @@ public class PlayerShoot : MonoBehaviour
     //Shot UI
     [SerializeField]
     private Image shotBarFillImage;
-    public Color[] colors;
     private int currentColorIndex = 0;
     private int targetColorIndex = 1;
+    public bool reverseColors;
     private float targetPoint;
     public float colorTransitionTime;
+    public Color startColor = Color.red;
+    public Color endColor = Color.blue;
+    [Range(0f, 1f)] // Restricts the float to a slider in the Inspector
+    public float scaleValue = 0.5f;
 
     //Shot accuracy and power
     [SerializeField]
@@ -60,6 +64,10 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Color lerpedColor = Color.Lerp(startColor, endColor, shotBarFillImage.fillAmount);
+        shotBarFillImage.color = lerpedColor;
+
         if (fireContinuously || fireSingle)
         {
             float timeSinceLastFire = Time.time - lastFireTime;
@@ -71,27 +79,6 @@ public class PlayerShoot : MonoBehaviour
                 lastFireTime = Time.time;
                 fireSingle = false;
             }
-        }
-    }
-
-
-    private Color SetGaugeColor(float percentage)
-    {
-        Color color = new Color();
-        return color;
-    }
-
-    private void ColorTransition()
-    {
-        targetPoint += Time.deltaTime/colorTransitionTime;
-        shotBarFillImage.color = Color.Lerp(colors[currentColorIndex], colors[targetColorIndex], targetPoint);
-        if(targetPoint >= 1f)
-        {
-            targetPoint = 0f;
-            currentColorIndex = targetColorIndex;
-            targetColorIndex++;
-            if (targetColorIndex == colors.Length)
-                targetColorIndex = 0;
         }
     }
 
@@ -162,10 +149,10 @@ public class PlayerShoot : MonoBehaviour
 
         while (elapsedTime < shotSliderTime && beginFiring)
         {
-            ColorTransition();
             elapsedTime += Time.deltaTime;
             float currentFillAmount = Mathf.Lerp(startFillAmount, targetFillAmount, elapsedTime / shotSliderTime);
             shotBarFillImage.fillAmount = currentFillAmount;
+            //ColorTransition();
             yield return null; // Wait for the next frame
         }
         //shotBarFillImage.fillAmount = targetFillAmount; // Ensure final value is accurate
@@ -182,6 +169,7 @@ public class PlayerShoot : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float currentFillAmount = Mathf.Lerp(startFillAmount, targetFillAmount, elapsedTime / shotDepletionSliderTime);
             shotBarFillImage.fillAmount = currentFillAmount;
+            //ColorTransition();
             yield return null; //  Wait for the next frame
         }
         //shotBarFillImage.fillAmount = targetFillAmount; // Ensure final value is accurate
