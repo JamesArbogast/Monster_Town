@@ -24,6 +24,8 @@ public class PlayerShoot : MonoBehaviour
     //Shot UI
     [SerializeField]
     private Image shotBarFillImage;
+    [SerializeField]
+    private Image shotBarFillInnerCircleImage;
     private int currentColorIndex = 0;
     private int targetColorIndex = 1;
     public bool reverseColors;
@@ -58,13 +60,18 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     private bool fireSingle;
     private float lastFireTime;
-
     private Coroutine fillCoroutine;
+
+    //player stats
+    private CharacterController player;
 
     // Update is called once per frame
     void Update()
     {
 
+        player = GetComponent<CharacterController>();
+
+        //attaching color of shot accuracy to fill bar image
         Color lerpedColor = Color.Lerp(startColor, endColor, shotBarFillImage.fillAmount);
         shotBarFillImage.color = lerpedColor;
 
@@ -88,13 +95,21 @@ public class PlayerShoot : MonoBehaviour
         //fireContinuously = inputValue.isPressed;
     }
 
+    private float GetSpeedModifier()
+    {
+        float speedModifier = projectileSpeed * shotBarFillImage.fillAmount;
+        return speedModifier;
+    }
+
     private void FireProjectile()
     {
+        //returns float with updated speed
+        float newSpeed = GetSpeedModifier(); 
         GameObject projectile = Instantiate(projectilePrefab, gunOffset.position, transform.rotation);
         Projectiles firedProjectile = projectile.GetComponent<Projectiles>();
         float rot = Mathf.Atan2(firedProjectile.rotation.y, firedProjectile.rotation.x) * Mathf.Rad2Deg;
         Rigidbody2D rigidBody = projectile.GetComponent<Rigidbody2D>();
-        rigidBody.linearVelocity = new Vector2(firedProjectile.direction.x, firedProjectile.direction.y).normalized * projectileSpeed;
+        rigidBody.linearVelocity = new Vector2(firedProjectile.direction.x, firedProjectile.direction.y).normalized * newSpeed;
         firedProjectile.transform.rotation = Quaternion.Euler(0, 0, rot+90);
     }
 
@@ -127,6 +142,7 @@ public class PlayerShoot : MonoBehaviour
                 fireSingle = true;
             }
             StopCoroutine(FillBarOverTime(0f));
+            shotBarFillInnerCircleImage.color = shotBarFillImage.color;
             Debug.Log("Firing is true");
             //show percentage of bar reached for accuracy and power data to ui
             shotPowerPercentageText.text = Mathf.Round((shotBarFillImage.fillAmount * 100)).ToString() + "%";
