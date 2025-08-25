@@ -63,25 +63,27 @@ public class CharacterController : BasePlayer
         anim.SetBool("PlayerMoving", isMoving);
         anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
         anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
-        //anim.SetFloat("LastMoveX", lastMove.x);
-        //anim.SetFloat("LastMoveY", lastMove.y);
     }
 
     private void FixedUpdate()
     {
         RotateInDirectionOfInput();
         SetPlayerVelocity();
-
         animMoveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        if (rgdbdy2D.linearVelocity.magnitude != 0)
+        if (animMoveInput.x != 0 || animMoveInput.y != 0)
         {
-            SetMovementAnimation(true);
+            playerMoving = true;
+            SetMovementAnimation(playerMoving);
+            lastMove = animMoveInput;
         }
         else
         {
-            SetMovementAnimation(false);
+            playerMoving = false;
+            anim.SetBool("PlayerMoving", playerMoving);
+            Debug.Log("Stopped moving");
+            anim.SetFloat("LastMoveX", lastMove.x);
+            anim.SetFloat("LastMoveY", lastMove.y);
         }
-        lastMove = animMoveInput;
 
         /*
         if(isDashActive)
