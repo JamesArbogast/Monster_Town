@@ -13,6 +13,9 @@ public class PlayerShoot : MonoBehaviour
     private float projectileSpeed;
 
     [SerializeField]
+    private float projectileDeceleration;
+
+    [SerializeField]
     private Transform gunOffset;
 
     [SerializeField]

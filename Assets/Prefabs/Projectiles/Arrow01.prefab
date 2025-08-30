@@ -134,8 +134,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 1.2
+  m_LinearDamping: 0.6
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -162,9 +162,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  deceleration: 0
   direction: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
   myRb: {fileID: 1903621442840080678}
+  _camera: {fileID: 0}
 --- !u!60 &8767034661302032712
 PolygonCollider2D:
   m_ObjectHideFlags: 0

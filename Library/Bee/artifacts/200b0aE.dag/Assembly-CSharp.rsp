@@ -456,6 +456,7 @@
 "Assets/Scripts/Player/PlayerAim.cs"
 "Assets/Scripts/Player/PlayerAnimator.cs"
 "Assets/Scripts/Player/PlayerDamagedInvincibility.cs"
+"Assets/Scripts/Player/PlayerFieldOfView.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/PlayerActions.cs"
 "Assets/Scripts/PlayerCharacters/BasePlayer.cs"

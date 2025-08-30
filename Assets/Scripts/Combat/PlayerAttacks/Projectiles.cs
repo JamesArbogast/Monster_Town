@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectiles : MonoBehaviour
 {
     public float speed;
+    public float deceleration;
     public Vector3 direction;
     public Vector3 rotation;
     public Rigidbody2D myRb;
@@ -18,6 +19,18 @@ public class Projectiles : MonoBehaviour
         mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
         direction = mousePos - transform.position;
         rotation = transform.position - mousePos;
+    }
+
+    private void FixedUpdate()
+    {
+        if(speed > 0)
+        {
+            speed -= deceleration * Time.deltaTime;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()

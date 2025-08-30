@@ -148,6 +148,7 @@
     <Compile Include="Assets\Scripts\PlayerCharacters\HunterMale.cs" />
     <Compile Include="Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerFieldOfView.cs" />
     <Compile Include="Assets\CursorsAndCrosshairs\CursorChanger.cs" />
     <Compile Include="Assets\Scripts\Collectibles\CollectibleSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
