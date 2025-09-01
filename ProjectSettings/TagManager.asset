@@ -58,6 +58,9 @@ TagManager:
   - name: Stone
     uniqueID: 3519188517
     locked: 0
+  - name: FieldofView
+    uniqueID: 668950267
+    locked: 0
   - name: Buildings
     uniqueID: 1461571535
     locked: 0
