@@ -18,14 +18,14 @@ public class PlayerFieldOfView : MonoBehaviour
         fov = 90f;
         origin = Vector3.zero;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         //the full angle that the triangles of the field of view are creating EG 90 degree angle
         //origin Vector of angle 
         //number of rays or number of triangles
         int rayCount = 50;
         //current angle
-        float angle = 0f;
+        float angle = startingAngle+90;
         float angleIncrease = fov / rayCount;
         //distance of view created by meshed triangles
         float viewDistance = 20f;
@@ -100,6 +100,6 @@ public class PlayerFieldOfView : MonoBehaviour
 
     public void SetAimDirection(Vector3 aimDirection)
     {
-        startingAngle = GetAngleFromVectorFloat(aimDirection)  - fov / 2f;
+        startingAngle = GetAngleFromVectorFloat(aimDirection)  - fov / 2;
     }
 }

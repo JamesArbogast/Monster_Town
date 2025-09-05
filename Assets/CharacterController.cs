@@ -27,6 +27,8 @@ public class CharacterController : BasePlayer
     private Camera _camera;
     private Animator anim;
 
+    [SerializeField]
+    private PlayerFieldOfView playerFieldOfView;
 
 
     /*
@@ -45,16 +47,6 @@ public class CharacterController : BasePlayer
         anim = GetComponent<Animator>();
     }
 
-    private void Start()
-    {
-
-    }
-
-
-    void Update()
-    {
-
-    }
 
     private void SetMovementAnimation(bool move)
     {
@@ -64,6 +56,16 @@ public class CharacterController : BasePlayer
         anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
         anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
     }
+
+    private void Update()
+    {
+        //field of view radial movement according to mouse position        
+        Vector3 mouseScreenPosition = Input.mousePosition;
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        playerFieldOfView.SetAimDirection(mouseWorldPosition);
+        playerFieldOfView.SetOrigin(transform.position);
+    }
+
 
     private void FixedUpdate()
     {
