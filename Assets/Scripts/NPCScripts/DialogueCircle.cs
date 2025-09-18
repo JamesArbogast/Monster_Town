@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class DialogueCircle : MonoBehaviour
 {
@@ -11,41 +12,45 @@ public class DialogueCircle : MonoBehaviour
     // these are all the states the NPC can be in while alive
     // NPC starts in an Idle state by default -- later, code will read NPC's profession/personality to determine other states
     public bool isIdle = true;
-    public bool isAlerted,
-                isPanicked,
-                isBusy,
-                isAttacking,
-                isConvinced,
-                isRecruited = false;
+    //public bool isAlerted,
+    //            isPanicked,
+    //            isBusy,
+    //            isAttacking,
+    //            isConvinced,
+    //            isRecruited = false;
     [SerializeField]
     // Text Objects + Control
     public TextMeshProUGUI greet,
                        alert,
                        convince,
                        defend;
+    private Rigidbody2D playerRb;
+    public NPC_Interaction npcInteraction = null;
+    public CharacterController characterLogic = null;
+    public NPC_Patrol movementLogic = null;
     public Canvas canvas;
     public GameObject canvasControl;
-
-    [SerializeField] 
     // Interactions with player
-    public bool npcGreeting = false;
-    public bool npcAlerting = false;
-    public bool npcDefending = false;
-    public bool npcConvincing = false;
-    public bool isGreeting = false;
-    public bool isAlerting = false;
-    public bool isDefending = false;
-    public bool isConvincing = false;
-
-
-
-
+    public bool npcGreeting,
+                npcAlerting,
+                npcDefending,
+                npcConvincing,
+                playerGreeting,
+                playerAlerting,
+                playerDefending,
+                playerConvincing = false;
 
 
     void Awake()
     {
         dialogueCircle.SetActive(false);
         canvasControl.SetActive(false);
+        GameObject tempObj = GameObject.Find("TestPlayer");
+        npcInteraction = GetComponent<NPC_Interaction>();
+        movementLogic = GetComponent<NPC_Patrol>();
+        //Debug.Log("tempObj is " + tempObj.name);
+        //characterLogic = tempObj.GetComponent<CharacterController>();
+        ////playerRb = characterLogic.rgdbdy2D;
     }
 
     // Update is called once per frame
@@ -71,15 +76,11 @@ public class DialogueCircle : MonoBehaviour
             {
                 greet.color = Color.white;
                 greet.fontStyle = FontStyles.Bold;
-                isGreeting = true;
-                if (Input.GetKeyDown(KeyCode.RightControl) && isGreeting)
+                playerGreeting = true;
+                if (Input.GetKeyDown(KeyCode.RightControl) && playerGreeting)
                 {
                     Debug.Log("should be greeting now...");
                     Greet();
-                }
-                if (Input.GetKeyUp(KeyCode.RightControl) && !npcGreeting)
-                {
-                    greet.text = "Greet";
                 }
             }
             if (Input.GetKeyUp("[8]"))
@@ -94,15 +95,11 @@ public class DialogueCircle : MonoBehaviour
             {
                 alert.color = Color.white;
                 alert.fontStyle = FontStyles.Bold;
-                isAlerting = true;
-                if (Input.GetKeyDown(KeyCode.RightControl) && isAlerting)
+                playerAlerting = true;
+                if (Input.GetKeyDown(KeyCode.RightControl) && playerAlerting)
                 {
                     Debug.Log("should be alerting now...");
                     Alert();
-                }
-                if (Input.GetKeyUp(KeyCode.RightControl) && !npcAlerting)
-                {
-                    alert.text = "Alert";
                 }
             }
             if (Input.GetKeyUp("[6]"))
@@ -117,22 +114,19 @@ public class DialogueCircle : MonoBehaviour
             {
                 defend.color = Color.white;
                 defend.fontStyle = FontStyles.Bold;
-                isDefending = true;
-                if (Input.GetKeyDown(KeyCode.RightControl) && isDefending)
+                playerDefending = true;
+                if (Input.GetKeyDown(KeyCode.RightControl) && playerDefending)
                 {
                     Debug.Log("should be defending now...");
                     Defend();
                 }
-                if (Input.GetKeyUp(KeyCode.RightControl) && !npcDefending)
-                {
-                    alert.text = "Defend";
-                }
             }
             if (Input.GetKeyUp("[5]"))
             {
-                defend.color = Color.blue;
+                defend.color = Color.lightBlue;
                 defend.fontStyle = FontStyles.Normal;
             }
+
             ////////////////////////////////////
             //////// Convince branch
             ///////////////////////////////////////
@@ -140,15 +134,11 @@ public class DialogueCircle : MonoBehaviour
             {
                 convince.color = Color.white;
                 convince.fontStyle = FontStyles.Bold;
-                isConvincing = true;
-                if (Input.GetKeyDown(KeyCode.RightControl) && isConvincing)
+                playerConvincing = true;
+                if (Input.GetKeyDown(KeyCode.RightControl) && playerConvincing)
                 {
                     Debug.Log("should be convincing now...");
                     Convince();
-                }
-                if (Input.GetKeyUp(KeyCode.RightControl) && !npcConvincing)
-                {
-                    alert.text = "Convince";
                 }
             }
             if (Input.GetKeyUp("[4]"))
@@ -156,12 +146,20 @@ public class DialogueCircle : MonoBehaviour
                 convince.color = Color.yellow;
                 convince.fontStyle = FontStyles.Normal;
             }
+
+            ////////////////////////////////////
+            //////// NPC Listening
+            ///////////////////////////////////////
+            if (transform.position.x - npcInteraction.home.transform.position.x < 1)
+            {
+                StartCoroutine(NPCSpeak());
+            }
         }
     }
     void Greet()
     {
         npcGreeting = true;
-        isGreeting = false;
+        playerGreeting = false;
         greet.text = "Hey there!";
         alert.text = "";
         defend.text = "";
@@ -171,7 +169,7 @@ public class DialogueCircle : MonoBehaviour
     void Alert()
     {
         npcAlerting = true;
-        isAlerting = false;
+        playerAlerting = false;
         greet.text = "";
         alert.text = "AAHHHHH!";
         defend.text = "";
@@ -181,21 +179,31 @@ public class DialogueCircle : MonoBehaviour
     void Defend()
     {
         npcDefending = true;
-        isDefending = false;
+        playerDefending = false;
         greet.text = "";
         alert.text = "";
         defend.text = "They won't know what hit 'em >:)";
         convince.text = "";
-        StartCoroutine(NPCSpeak());
+        if (transform.position.x - npcInteraction.home.transform.position.x < 1)
+        {
+            StartCoroutine(NPCSpeak());
+        }
     }
     void Convince()
     {
         npcConvincing = true;
-        isConvincing = false;
+        playerConvincing = false;
         greet.text = "";
         alert.text = "";
         defend.text = "";
-        convince.text = "Oh shit! I believe you!";
+        if(npcInteraction.isConvinced)
+        {
+            convince.text = "Oh shit! I believe you!";
+        }
+        if(npcInteraction.isConvinced == false)
+        {
+            convince.text = "Get the fuck outta heeeya!";
+        }
         StartCoroutine(NPCSpeak());
     }
     void ResetDialogueWheel()
@@ -210,11 +218,16 @@ public class DialogueCircle : MonoBehaviour
         npcAlerting = false;
         npcDefending = false;
         npcConvincing=false;
+        npcInteraction.isConvinced = false;
     }    
 
-    private IEnumerator NPCSpeak()
+    public IEnumerator NPCSpeak()
     {
+        dialogueCircle.SetActive(false);
         yield return new WaitForSeconds(3);
+        // RESET NPC SETTINGS
+        npcInteraction.sprite.SetActive(true);
+        movementLogic.speed = 2;
         ResetDialogueWheel();
     }
 }

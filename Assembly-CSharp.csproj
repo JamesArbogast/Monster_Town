@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\GameFunction\SignalListener.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\NPCScripts\NPC_Personality.cs" />
     <Compile Include="Assets\DayNightCycle.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\ScientistMale.cs" />
     <Compile Include="Assets\Dialogue\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\ObjectGold.cs" />
+    <Compile Include="Assets\Scripts\NPCScripts\NPC_Interaction.cs" />
     <Compile Include="Assets\Scripts\Items\ItemMain\Item.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacters\HunterMale.cs" />
     <Compile Include="Assets\Scripts\Combat\PlayerAttacks\Projectiles.cs" />

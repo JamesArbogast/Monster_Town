@@ -2,14 +2,15 @@ using System.Collections;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class NPC_Patrol : MonoBehaviour
 {
+    [SerializeField]
     public Vector2[] patrolPoints;
-    public float speed = 2;
+    public float speed;
     public float pauseDuration = 1.5f;
 
     private bool isPaused = false;
-    private Vector2 target;
+    public Vector2 target;
     private int currentPatrolIndex;
     private Rigidbody2D rb;
     private Animator anim;

@@ -12,7 +12,7 @@ public class CharacterController : BasePlayer
     [SerializeField]
     private float screenBorder;
 
-    private Rigidbody2D rgdbdy2D;
+    public Rigidbody2D rgdbdy2D;
     private PlayerAwarenessController playerAwarenessController;
     private Vector2 targetDirection;
     private Vector2 movementInput;
